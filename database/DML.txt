@@ -1,6 +1,0 @@
-INSERT INTO tbl_ucs(NOMBRE_UCS, IMPR_IFV_1)
-VALUES  ('UCS1', 'VO'),
-('UCS2','VO'),
-('UCS3', 'VD'),
-('UCS4','VO'),
-('UCS5','VO')

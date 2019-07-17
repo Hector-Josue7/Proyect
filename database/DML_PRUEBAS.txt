@@ -41,7 +41,11 @@ insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL)
  values ('soporte y atención a los usuarios', '2018-09-19', '2019-07-12');
 insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
  values ('prestación de servicios como impresión', '2019-01-08', '2019-06-15');
-
+insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
+ values ('Diseñar, analizar e implementar nuevos sistemas automatizados según las necesidades de las áreas solicitantes, así como actualizar los ya existentes.', '2018-08-14', '2019-04-26');
+insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
+ values ('Propiciar acciones para el mantenimiento óptimo de los sistemas ya implantados.', '2018-11-02', '2018-11-06');
+
 insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
 values (9, 1, 'Héctor Josué', 'Ardón Morga', 'hectorjosuea@hotmail.com','2019-01-11 08:00:01', '2019-01-11 17:07:01', 12345678, 99001122);
 insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
@@ -60,6 +64,10 @@ insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_
 values (3, 2, 'Wilton Christa', 'Rogahn Lind', 'wiltonchrista@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
 insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
 values (4, 2, 'Dimitri Amalia', 'Cassin Zboncak', 'dimitriamalia@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
+insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
+values (8, 1, 'Iva Mittie', 'Langworth Rowe', 'ivamittie@hotmail.com','2019-01-11 08:06:45', '2019-01-11 17:12:01', 91011120, 24151617);
+insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
+values (8, 1, 'Daphnee Alec ', 'Schroeder Ward', 'daphneealec@hotmail.com','2019-01-11 08:06:45', '2019-01-11 17:12:01', 91011120, 24151617);
 
 insert into tbl_sitios(NOMBRE_SITIO) 
  values ('SALA DE EQUIPOS');
@@ -115,6 +123,23 @@ insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO
 values (5, 8, 1 ,'joanieSierra1', 'asd.1234');
 insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
 values (6, 8, 1 ,'elouiseLiam2', 'asd.12345');
+insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
+values (6, 8, 1 ,'elouiseLiam2', 'asd.12345');
+insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
+values (10, 8, 1 ,'ivamitie43', 'asd.123456');
+insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
+values (11, 8, 1 ,'daphnee2019', 'asd.1234567');
+
+insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
+values (1, 5, 8, 1);
+insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
+values (2, 5, 8, 1);
+insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
+values (1, 6, 8, 1);
+
+
+
+
 
 
 
