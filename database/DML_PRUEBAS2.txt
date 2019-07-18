@@ -1,0 +1,103 @@
+insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR EJECUTIVO');
+  insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR DE OPERACIONES');
+  insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR COMERCIAL - CSO');
+ insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR DE MARKETING');
+ insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR DE RECURSOS HUMANOS');
+insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('CUSTOMER SUCCESS (CS)');
+insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('DIRECTOR FINANCIERO');
+insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('TECNICO DE MANTENIMIENTO');
+insert into tbl_cargos(NOMBRE_CARGO) 
+ values ('PRACTICANTE INGENIERO DE SOFTWARE');
+
+insert into tbl_paises(PAIS) 
+ values ('GUATEMALA');
+insert into tbl_paises(PAIS) 
+ values ('BELICE');
+insert into tbl_paises(PAIS) 
+ values ('EL SALVADOR');
+insert into tbl_paises(PAIS) 
+ values ('HONDURAS');
+insert into tbl_paises(PAIS) 
+ values ('NICARAGUA');
+insert into tbl_paises(PAIS) 
+ values ('COSTA RICA');
+insert into tbl_paises(PAIS) 
+ values ('PANAMA');
+
+insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
+ values (4, 'TEGUCIGALPA');
+insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
+ values (4, 'SAN PEDRO SULA');
+insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
+ values (4, 'LA CEIBA');
+insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
+ values (4, 'ROATAN');
+
+insert into tbl_localidades(ID_CIUDAD, NOMBRE_LOCALIDAD) 
+ values (1, 'TONCONTIN');
+
+insert into tbl_unidades(ID_LOCALIDAD, NOMBRE_UNIDAD) 
+ values (1, 'SALA DE EQUIPOS');
+insert into tbl_unidades(ID_LOCALIDAD, NOMBRE_UNIDAD) 
+ values (1, 'CENTRO DE CONTROL');
+insert into tbl_unidades(ID_LOCALIDAD, NOMBRE_UNIDAD) 
+ values (1, 'CENTRO DE CONTROL Y SIMULACION');
+insert into tbl_unidades(ID_LOCALIDAD, NOMBRE_UNIDAD) 
+ values (1, 'SALA DBM, CENTRO DE CONTROL');
+
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_DIARIO)
+values (2, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_SEMANAL)
+values (1, 'X');
+insert into tbl_permisos(ID_UNIDAD, PERMISO_MENSUAL)
+values (4, 'X');
+
+
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '1-1');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '1-2');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '1-3');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '1-4');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '1-5');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (2, '1-6');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '3-1');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '3-2');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (2, '4');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (3, '5-1');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '6');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '7-1');
+insert into tbl_formatos(ID_UNIDAD, NOMBRE_FORMATO)
+values (1, '7-2');
+
+
+
+

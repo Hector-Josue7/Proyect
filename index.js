@@ -48,7 +48,6 @@ app.post('/login', function(request, response) {  // http://localhost:4000/login
 	if (username && clave) {
 		conexion.query('SELECT * FROM tbl_usuarios_del_sistema WHERE USUARIO = ? AND CONTRASENA = ?', [request.body.USUARIO, request.body.CONTRASENA], function(error, results, fields) {
 			if (results.length > 0) {
-
                   response.send({status:1,mensaje:"Usuario autenticado con éxito"});
                   request.session.codigoUsuario = results[0].id_usuario;
                   request.session.correoUsuario = results[0].correo;
@@ -62,7 +61,7 @@ app.post('/login', function(request, response) {  // http://localhost:4000/login
        
 			} else {
                // response.redirect('/index.html');
-				response.send('Incorrect Username and/or Password!');
+				response.send('USUARIO O CONTRASEÑA INCORRECTA');
              //   response.sendFile(path.join(__dirname + '/index.html'));
             }			
 			response.end();
