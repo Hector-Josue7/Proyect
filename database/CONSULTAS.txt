@@ -1,0 +1,2 @@
+SELECT * FROM `tbl_pantalla_datos_radar`
+WHERE ID_FORMATO=4;

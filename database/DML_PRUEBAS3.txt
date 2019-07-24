@@ -1,222 +1,151 @@
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR EJECUTIVO');
-  insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE OPERACIONES');
-  insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR COMERCIAL - CSO');
- insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE MARKETING');
- insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE RECURSOS HUMANOS');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('CUSTOMER SUCCESS (CS)');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR FINANCIERO');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('TECNICO DE MANTENIMIENTO');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('PRACTICANTE INGENIERO DE SOFTWARE');
+INSERT INTO `tbl_cargos` (`ID_CARGO`, `NOMBRE_CARGO`) VALUES
+(1, 'DIRECTOR EJECUTIVO'),
+(2, 'DIRECTOR DE OPERACIONES'),
+(3, 'DIRECTOR COMERCIAL - CSO'),
+(4, 'DIRECTOR DE MARKETING'),
+(5, 'DIRECTOR DE RECURSOS HUMANOS'),
+(6, 'CUSTOMER SUCCESS (CS)'),
+(7, 'DIRECTOR FINANCIERO'),
+(8, 'TECNICO DE MANTENIMIENTO'),
+(9, 'PRACTICANTE INGENIERO DE SOFTWARE');
 
-insert into tbl_paises(PAIS) 
- values ('GUATEMALA');
-insert into tbl_paises(PAIS) 
- values ('BELICE');
-insert into tbl_paises(PAIS) 
- values ('EL SALVADOR');
-insert into tbl_paises(PAIS) 
- values ('HONDURAS');
-insert into tbl_paises(PAIS) 
- values ('NICARAGUA');
-insert into tbl_paises(PAIS) 
- values ('COSTA RICA');
-insert into tbl_paises(PAIS) 
- values ('PANAMA');
+INSERT INTO `tbl_paises` (`ID_PAIS`, `PAIS`) VALUES
+(1, 'GUATEMALA'),
+(2, 'BELICE'),
+(3, 'EL SALVADOR'),
+(4, 'HONDURAS'),
+(5, 'NICARAGUA'),
+(6, 'COSTA RICA'),
+(7, 'PANAMA');
 
-insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
- values (4, 'TEGUCIGALPA');
-insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
- values (4, 'SAN PEDRO SULA');
-insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
- values (4, 'LA CEIBA');
-insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
- values (4, 'ROATAN');
-insert into tbl_ciudades(ID_PAIS, NOMBRE_CIUDAD) 
- values (4, 'COMAYAGUA');
+INSERT INTO `tbl_ciudades` (`ID_PAIS`, `ID_CIUDAD`, `NOMBRE_CIUDAD`) VALUES
+(4, 1, 'TEGUCIGALPA'),
+(4, 2, 'SAN PEDRO SULA'),
+(4, 3, 'LA CEIBA'),
+(4, 4, 'ROATAN'),
+(4, 5, 'COMAYAGUA');
 
-insert into tbl_sitios(ID_CIUDAD, NOMBRE_SITIO) 
- values (1, 'MACC');
-insert into tbl_sitios(ID_CIUDAD, NOMBRE_SITIO) 
- values (1, 'CYR');
-insert into tbl_sitios(ID_CIUDAD, NOMBRE_SITIO) 
- values (1, 'RADAR/VIGILANCIA');
-insert into tbl_sitios(ID_CIUDAD, NOMBRE_SITIO) 
- values (1, 'ELECTROMECANICA');
+INSERT INTO `tbl_sitios` (`ID_SITIO`, `ID_CIUDAD`, `NOMBRE_SITIO`) VALUES
+(1, 1, 'MACC'),
+(2, 1, 'CYR'),
+(3, 1, 'RADAR/VIGILANCIA'),
+(4, 1, 'ELECTROMECANICA');
 
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-2');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-3');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-4');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-5');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('DIARIO 1-6');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('SEMANAL 3-1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('SEMANAL 3-2');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 4');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 5-1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('TRIMESTRAL 5-2');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 6');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 7-1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 7-2');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('TRIMESTRAL 8');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('SEMANAL 1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('SEMANAL 3');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 1-1');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 1-2');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 1-3');
-insert into tbl_formatos(NOMBRE_FORMATO)
-values ('MENSUAL 1-4');
+INSERT INTO `tbl_unidades` (`ID_UNIDAD`, `NOMBRE_UNIDAD`) VALUES
+(1, 'SALA DE EQUIPOS'),
+(2, 'CENTRO DE CONTROL'),
+(3, 'CENTRO DE CONTROL Y SIMULACION'),
+(4, 'SALA DBM, CENTRO DE CONTROL'),
+(5, 'AUTOMATIZACION'),
+(6, 'COMUNICACION');
 
-insert into tbl_unidades(NOMBRE_UNIDAD) 
- values ('SALA DE EQUIPOS');
-insert into tbl_unidades(NOMBRE_UNIDAD) 
- values ('CENTRO DE CONTROL');
-insert into tbl_unidades (NOMBRE_UNIDAD) 
- values ('CENTRO DE CONTROL Y SIMULACION');
-insert into tbl_unidades(NOMBRE_UNIDAD) 
- values ('SALA DBM, CENTRO DE CONTROL');
-insert into tbl_unidades(NOMBRE_UNIDAD) 
- values ('AUTOMATIZACION');
-insert into tbl_unidades(NOMBRE_UNIDAD) 
- values ('COMUNICACION');
+INSERT INTO `tbl_sistemas` (`ID_SISTEMA`, `NOMBRE_SISTEMA`) VALUES
+(1, 'AIRCON 2100'),
+(2, 'AIRCON 2100 DIFUSORES'),
+(3, 'WSACC'),
+(4, 'AMH');
 
-insert into tbl_sistemas(NOMBRE_SISTEMA)
-values('AIRCON 2100');
-insert into tbl_sistemas(NOMBRE_SISTEMA)
-values('AIRCON 2100 DIFUSORES');
-insert into tbl_sistemas(NOMBRE_SISTEMA)
-values('WSACC');
-insert into tbl_sistemas(NOMBRE_SISTEMA)
-values('AMH');
+INSERT INTO `tbl_formatos` (`ID_FORMATO`, `NOMBRE_FORMATO`) VALUES
+(1, 'DIARIO 1-1'),
+(2, 'DIARIO 1-2'),
+(3, 'DIARIO 1-3'),
+(4, 'DIARIO 1-4'),
+(5, 'DIARIO 1-5'),
+(6, 'DIARIO 1-6'),
+(7, 'SEMANAL 3-1'),
+(8, 'SEMANAL 3-2'),
+(9, 'SEMANAL 1'),
+(10, 'SEMANAL 3'),
+(11, 'MENSUAL 1-1'),
+(12, 'MENSUAL 1-2'),
+(13, 'MENSUAL 1-3'),
+(14, 'MENSUAL 1-4'),
+(15, 'MENSUAL 4'),
+(16, 'MENSUAL 5-1'),
+(17, 'MENSUAL 6'),
+(18, 'MENSUAL 7-1'),
+(19, 'MENSUAL 7-2'),
+(20, 'TRIMESTRAL 5-2'),
+(21, 'TRIMESTRAL 8');
 
 
-insert into tbl_unidades_has_tbl_sistemas(ID_UNIDAD, ID_SISTEMA)
-values (5, 1);
-insert into tbl_unidades_has_tbl_sistemas(ID_UNIDAD, ID_SISTEMA)
-values (5, 3);
-insert into tbl_unidades_has_tbl_sistemas(ID_UNIDAD, ID_SISTEMA)
-values (5, 4);
+INSERT INTO `tbl_pantalla_datos_radar` (`ID_FORMATO`, `ID_SISTEMA`, `ID_PANTALLA`, `NOMBRE_PANTALLA`, `EQUIPO_AL_QUE_PERTENECE`, `IMPRESORA`, `SERVIDOR_OPERATIVO`) VALUES
+(1, 1, 1, 'SDD1', 'UCS1', 'VERDE OSCURO', NULL),
+(1, 1, 2, 'SDD2', 'UCS1', 'VERDE OSCURO', NULL),
+(1, 1, 3, 'SDD3', 'UCS2', 'VERDE OSCURO', NULL),
+(1, 1, 4, 'SDD4', 'UCS2', 'VERDE OSCURO', NULL),
+(1, 1, 5, 'SDD5', 'UCS3', 'VERDE OSCURO', NULL),
+(1, 1, 6, 'SDD6', 'UCS3', 'VERDE OSCURO', NULL),
+(1, 1, 7, 'SDD7', 'UCS4', 'VERDE OSCURO', NULL),
+(1, 1, 8, 'SDD8', 'UCS4', 'VERDE OSCURO', NULL),
+(1, 1, 9, 'SDD9', 'UCS5', 'VERDE OSCURO', NULL),
+(1, 1, 10, 'SDD10', 'UCS5', 'VERDE OSCURO', NULL),
+(2, 1, 11, 'SDD11', 'SPO', NULL, NULL),
+(2, 1, 12, 'SDD12', 'SPT', NULL, NULL),
+(2, 1, 13, 'SDD13', 'CENAMER RADIO', NULL, NULL),
+(2, 1, 14, 'SDD14', 'ATFM', NULL, NULL),
+(2, 1, 15, 'SDD15', 'SAR', NULL, NULL),
+(3, 1, 16, 'FDD 1', 'PRESENTACION PLAN DE VUELO', NULL, NULL),
+(3, 1, 17, 'FDD 2', 'PRESENTACION PLAN DE VUELO', NULL, NULL),
+(4, 1, 18, 'FDP 1', 'PROCESAMIENTO PLANES DE VUELO', NULL, NULL),
+(4, 1, 19, 'FDP 2', 'PROCESAMIENTO PLANES DE VUELO', NULL, NULL),
+(4, 1, 20, 'AFTN', 'PROCESAMIENTO PLANES DE VUELO', NULL, NULL),
+(4, 1, 21, 'SDP 1', 'PROCESAMIENTO DATOS RADAR', NULL, NULL),
+(4, 1, 22, 'SDP 2', 'PROCESAMIENTO DATOS RADAR', NULL, NULL),
+(4, 1, 23, 'DLS 1', 'PROCESAMIENTO ENLACE DE DATOS (ADS/CPDLC)', NULL, NULL),
+(4, 1, 24, 'DLS 2', 'PROCESAMIENTO ENLACE DE DATOS (ADS/CPDLC)', NULL, NULL),
+(4, 1, 25, 'LINEAS DLS', 'PROCESAMIENTO ENLACE DE DATOS (ADS/CPDLC)', NULL, NULL),
+(4, 1, 26, 'SNET 1', 'PROCESAMIENTO DE ALARMAS', NULL, NULL),
+(4, 1, 27, 'SNET 2', 'PROCESAMIENTO DE ALARMAS', NULL, NULL),
+(5, 1, 28, 'RDCU 1', 'PROCESAMIENTO DE COMUNICACIONES RADAR', NULL, NULL),
+(5, 1, 29, 'RDCU 2', 'PROCESAMIENTO DE COMUNICACIONES RADAR', NULL, NULL),
+(5, 1, 30, 'RDCU_TX1', 'PROCESAMIENTO DE COMUNICACIONES RADAR', NULL, NULL),
+(5, 1, 31, 'CMD SPO', 'SUPERVISION', NULL, NULL),
+(5, 1, 32, 'CMD SPT', 'SUPERVISION', NULL, NULL),
+(5, 1, 33, 'DRF 1', 'GRABACION / REPRODUCCION DE VIDEO', NULL, NULL),
+(5, 1, 34, 'DRF 2', 'GRABACION / REPRODUCCION DE VIDEO', NULL, NULL);
 
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'UCS1');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'UCS2');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'UCS3');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'UCS4');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'UCS5');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'SPO');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'SPT');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'CEN.RAD');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'ATFM');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'SAR');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'SAR');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PRESENTACIÓN PLAN DE VUELO');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PROCESAMIENTO DE PLANES DE VUELO');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PROCESAMIENTO DATOS RADAR');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PROCESAMIENTO ENLACE DE DATOS (ADS/CPDLC)');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PROCESAMIENTO DE ALARMAS');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'PROCESAMIENTO DE COMUNICACIONES RADAR');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'SUPERVISION');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'GRABACION / REPRODUCCION DE VIDEO');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'RADAR 1');
-insert into tbl_equipos(ID_SISTEMA, NOMBRE_EQUIPO)
-values (1, 'RADAR 2');
+INSERT INTO `tbl_datos_formato` (`ID_FORMATO`, `ID_PANTALLA`, `FECHA_AUTOMATICA`, `ESTADO`, `LAN_1`, `LAN_2`, `FIRMA_O_INICIALES_TECNICO`) VALUES
+(1, 1, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 2, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 3, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 4, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 5, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 6, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 7, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 8, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 9, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 10, '2019-07-25 01:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Blake Gleichner'),
+(1, 1, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 2, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 3, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 4, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 5, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 6, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 7, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 8, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 9, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(1, 10, '2019-07-24 20:09:27', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Karolann Flatley'),
+(2, 11, '2019-07-24 20:22:38', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Salvatore Ferry'),
+(2, 12, '2019-07-24 20:22:38', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Salvatore Ferry'),
+(2, 13, '2019-07-24 20:22:38', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Salvatore Ferry'),
+(2, 14, '2019-07-24 20:22:38', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Salvatore Ferry'),
+(2, 15, '2019-07-24 20:22:38', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Salvatore Ferry'),
+(2, 11, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Vickie Boyle'),
+(2, 12, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Vickie Boyle'),
+(2, 13, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Vickie Boyle'),
+(2, 14, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Vickie Boyle'),
+(2, 15, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Vickie Boyle'),
+(3, 16, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Reilly Spencer'),
+(3, 17, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Reilly Spencer'),
+(3, 16, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Reilly Spencer'),
+(3, 17, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Reilly Spencer'),
+(3, 16, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Nick Kulas'),
+(3, 17, '2019-07-25 07:05:32', 'VERDE OSCURO', 'NEGRO', 'GRIS', 'Simone Ratke');
 
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD1');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD2');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD3');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD4');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD5');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD6');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD7');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD8');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD9');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD10');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD11');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD12');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD13');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD14');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('SDD15');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('FDD 1');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('FDD 2');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('FDP 1');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('FDP 2');
-insert into tbl_pantalla_datos_radar(NOMBRE_PANTALLA)
-values ('FDP 1');
-
-insert into tbl_datos_formato(ID_FORMATO, ID_EQUIPO, ID_PANTALLA,  ESTADO, LAN_1, LAN_2, IMPRESORA)
-values (1, 1, 1, 'VERDE OSCURO', 'NEGRO', 'GRIS', 'VERDE OSCURO');
-insert into tbl_datos_formato(ID_FORMATO, ID_EQUIPO, ID_PANTALLA,  ESTADO, LAN_1, LAN_2, IMPRESORA)
-values (1, 1, 2 , 'VERDE OSCURO', 'NEGRO', 'GRIS', 'VERDE OSCURO');
-insert into tbl_datos_formato(ID_FORMATO, ID_EQUIPO, ID_PANTALLA,  ESTADO, LAN_1, LAN_2, IMPRESORA)
-values (1, 1, 2 , 'VERDE OSCURO', 'NEGRO', 'GRIS', 'VERDE OSCURO');
-
-
-
+INSERT INTO `tbl_unidades_has_tbl_sistemas` (`ID_UNIDAD`, `ID_SISTEMA`) VALUES
+(5, 1),
+(5, 3),
+(5, 4);
 
 
