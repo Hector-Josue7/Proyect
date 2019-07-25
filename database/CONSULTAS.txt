@@ -1,2 +1,15 @@
-SELECT * FROM `tbl_pantalla_datos_radar`
+SELECT * FROM tbl_pantalla_datos_radar
 WHERE ID_FORMATO=4;
+
+ select * from libros
+  where titulo='El aleph' and
+  autor='Borges' and
+  editorial='Planeta';
+
+Luego eliminamos con "limit" la cantidad sobrante (tenemos 3 y queremos solo 1):
+
+ delete from libros
+  where titulo='El aleph' and
+  autor='Borges' and
+  editorial='Planeta'
+  limit 2;
