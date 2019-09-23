@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Inicio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+
+	<style>
+	body {
+
+
+  background-color: #E1E2E1;  
+}
+
+
+
+/* 
+.wrapper {
+    display: block;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+ 
+    z-index: 9999;
+} */
+
+/* .overlay {
+    display: none;
+    position: fixed; */
+    /* full screen */
+    /* width: 100vw;
+    height: 100vh; */
+    /* transparent black */
+    /* background: rgba(0, 0, 0, 0.7); */
+    /* middle layer, i.e. appears below the sidebar */
+    /* z-index: 998;
+    opacity: 0; */
+    /* animate the transition */
+    /* transition: all 0.5s ease-in-out; */
+/* } */
+/* display .overlay when it has the .active class */
+/* .overlay.active {
+    display: block;
+    opacity: 1;
+} */
+
+/* #dismiss {
+    width: 35px;
+    height: 35px;
+    position: absolute; */
+    /* top right corner of the sidebar */
+    /* top: 10px;
+    right: 10px;
+} */
+
+	</style>
+</head>
+<body>
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard">
+			
+		</div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="./img/ac_generico.jpg" alt="UserIcon">
+					<figcaption class="text-center text-titles">User Name</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="#!">
+							<i class="zmdi zmdi-settings"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="home.html">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Menu principal
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Formatos <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="formatDiario.html"><i class="zmdi zmdi-navigation zmdi-hc-fw"></i> Diario </a> 
+						</li>
+						<li>
+							<a href="subject.html"><i class="zmdi zmdi-navigation zmdi-hc-fw"></i> Semanal</a>
+						</li>
+						<li>
+							<a href="section.html"><i class="zmdi zmdi-navigation zmdi-hc-fw"></i> Mensual</a>
+						</li>
+						<li>
+							<a href="salon.html"><i class="zmdi zmdi-navigation zmdi-hc-fw"></i> Trimestral</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+						<a href="#!" class="btn-sideBar-SubMenu">
+							<i class="zmdi zmdi-case zmdi-hc-fw"></i> Sistemas <i class="zmdi zmdi-caret-down pull-right"></i>
+						</a>
+						<ul class="list-unstyled full-box">
+							<li>
+								<a href="period.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> 1-1</a>
+							</li>
+							<li>
+								<a href="subject.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> 1-2</a>
+							</li>
+							<li>
+								<a href="section.html"><i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> 1-3</a>
+							</li>
+							<li>
+								<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> 1-4</a>
+							</li>
+							<li>
+									<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> 1-5</a>
+								</li>
+								<li>
+										<a href="salon.html"><i class="zmdi zmdi-font zmdi-hc-fw"></i> 1-6</a>
+									</li>
+						</ul>
+					</li>
+				<!-- <li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Users <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Admin</a>
+						</li>
+						<li>
+							<a href="teacher.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Teacher</a>
+						</li>
+						<li>
+							<a href="student.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Student</a>
+						</li>
+						<li>
+							<a href="representative.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representative</a>
+						</li>
+					</ul>
+				</li> -->
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-card zmdi-hc-fw"></i> Unidades <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="registration.html"><i class="zmdi zmdi-money-box zmdi-hc-fw"></i> Registration</a>
+						</li>
+						<li>
+							<a href="payments.html"><i class="zmdi zmdi-money zmdi-hc-fw"></i> Payments</a>
+						</li>
+					</ul>
+				</li> 
+				<!-- <li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Settings School <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="school.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> School Data</a>
+						</li>
+					</ul>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+
+	<!-- Content page-->
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="full-box dashboard-Navbar">
+			<ul class="full-box list-unstyled text-right">
+				<li class="pull-left">
+					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+				</li>
+				<li>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="zmdi zmdi-notifications-none"></i>
+						<span class="badge">7</span>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-search">
+						<i class="zmdi zmdi-search"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-modal-help">
+						<i class="zmdi zmdi-help-outline"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		
+
+		  <div class="jumbotron  " style="margin: 40px 220px 0px 30px; padding: 20px 15px; background: #076585;  
+		  background: -webkit-linear-gradient(to bottom, #fff, #076585);  
+		  background: linear-gradient(to bottom, #fff, #076585); ">
+				<h2 class="display-4">	  Mantenimiento de equipos AIRCON 2100</h2>
+		
+				<hr class="my-4">
+				<div class="card card-body">
+
+						<div class="x_content table-responsive" >
+	
+								<table class="table table-bordered " style="width:700px" id="tablaEncabezado" >
+									<thead>
+									  <tr>
+										<th scope="col" colspan="2" style="text-align: center">RUTINA DE MANTENIMIENTO</th>
+									
+									
+										<th scope="col">Gerencia de estación</th>
+										<th scope="col">SITIO</th>
+										<th scope="col">SISTEMA/EQUIPO</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+											  <th>Código</th>
+											  <td>MTTO-GT-MTO-303</td>
+								
+											 
+											  <td rowspan="3">HONDURAS</td>
+											  <td rowspan="3">SALA DE EQUIPOS</td>
+											  <td  rowspan="3">AIRCON 2100</td>
+								 
+									 
+									  </tr>
+				  
+									  <tr>
+									   
+							
+										<th>Edición</th>
+								 
+										<td>004</td>
+										
+									 
+									  </tr>
+								  
+									</tbody>
+								  </table>
+				  
+							</div>
+	
+				</div>
+		
+			  </div>
+			  
+
+		  
+		  <!-- end of accordion -->
+		<!-- Content page -->
+	
+		<!-- <div class="container-fluid">
+			<div class="page-header">
+			  <h1 class="text-titles">System <small>TimeLine</small></h1>
+			</div>
+			<section id="cd-timeline" class="cd-container">
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img">
+                        <img src="./assets/img/avatar.jpg" alt="user-picture">
+                    </div>
+                    <div class="cd-timeline-content">
+                        <h4 class="text-center text-titles">1 - Name (Admin)</h4>
+                        <p class="text-center">
+                            <i class="zmdi zmdi-timer zmdi-hc-fw"></i> Start: <em>7:00 AM</em> &nbsp;&nbsp;&nbsp; 
+                            <i class="zmdi zmdi-time zmdi-hc-fw"></i> End: <em>7:17 AM</em>
+                        </p>
+                        <span class="cd-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> 07/07/2016</span>
+                    </div>
+                </div>  
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img">
+                        <img src="./assets/img/avatar.jpg" alt="user-picture">
+                    </div>
+                    <div class="cd-timeline-content">
+                        <h4 class="text-center text-titles">2 - Name (Teacher)</h4>
+                        <p class="text-center">
+                            <i class="zmdi zmdi-timer zmdi-hc-fw"></i> Start: <em>7:00 AM</em> &nbsp;&nbsp;&nbsp; 
+                            <i class="zmdi zmdi-time zmdi-hc-fw"></i> End: <em>7:17 AM</em>
+                        </p>
+                        <span class="cd-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> 07/07/2016</span>
+                    </div>
+                </div>
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img">
+                        <img src="./assets/img/avatar.jpg" alt="user-picture">
+                    </div>
+                    <div class="cd-timeline-content">
+                        <h4 class="text-center text-titles">3 - Name (Student)</h4>
+                        <p class="text-center">
+                            <i class="zmdi zmdi-timer zmdi-hc-fw"></i> Start: <em>7:00 AM</em> &nbsp;&nbsp;&nbsp; 
+                            <i class="zmdi zmdi-time zmdi-hc-fw"></i> End: <em>7:17 AM</em>
+                        </p>
+                        <span class="cd-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> 07/07/2016</span>
+                    </div>
+                </div>
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img">
+                        <img src="./assets/img/avatar.jpg" alt="user-picture">
+                    </div>
+                    <div class="cd-timeline-content">
+                        <h4 class="text-center text-titles">4 - Name (Personal Ad.)</h4>
+                        <p class="text-center">
+                            <i class="zmdi zmdi-timer zmdi-hc-fw"></i> Start: <em>7:00 AM</em> &nbsp;&nbsp;&nbsp; 
+                            <i class="zmdi zmdi-time zmdi-hc-fw"></i> End: <em>7:17 AM</em>
+                        </p>
+                        <span class="cd-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> 07/07/2016</span>
+                    </div>
+                </div>   
+            </section>
+
+
+		</div>
+
+	</section>-->
+
+			<!-- Sidebar -->
+	<!-- <div class="wrapper">
+
+		<nav id="sidebar">
+	
+			<div id="dismiss">
+				<i class="fas fa-arrow-left"></i>
+			</div>
+	
+			<div class="sidebar-header">
+				<h3>Bootstrap Sidebar</h3>
+			</div>
+	
+			<ul class="list-unstyled components">
+				<p>Dummy Heading</p>
+				<li class="active">
+					<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+					<ul class="collapse list-unstyled" id="homeSubmenu">
+						<li>
+							<a href="#">Home 1</a>
+						</li>
+						<li>
+							<a href="#">Home 2</a>
+						</li>
+						<li>
+							<a href="#">Home 3</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">About</a>
+					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li>
+							<a href="#">Page 1</a>
+						</li>
+						<li>
+							<a href="#">Page 2</a>
+						</li>
+						<li>
+							<a href="#">Page 3</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Portfolio</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</nav> -->
+	
+		<!-- Page Content -->
+		<!-- <div id="content">
+	
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+	
+					<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fas fa-align-left"></i>
+						<span>Toggle Sidebar</span>
+					</button>
+				</div>
+			</nav>
+		</div> -->
+
+		<div class="overlay"></div>
+	</div> 
+
+
+	<!-- Notifications area -->
+	<section class="full-box Notifications-area">
+		<div class="full-box Notifications-bg btn-Notifications-area"></div>
+		<div class="full-box Notifications-body">
+			<div class="Notifications-body-title text-titles text-center">
+				Notifications <i class="zmdi zmdi-close btn-Notifications-area"></i>
+			</div>
+			<div class="list-group">
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-triangle"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">17m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				    </div>
+			  	</div>
+			  	<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-alert-octagon"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">15m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				    </div>
+			  	</div>
+			  	<div class="list-group-separator"></div>
+				<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-help"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">10m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				    </div>
+				</div>
+			  	<div class="list-group-separator"></div>
+			  	<div class="list-group-item">
+				    <div class="row-action-primary">
+				      	<i class="zmdi zmdi-info"></i>
+				    </div>
+				    <div class="row-content">
+				      	<div class="least-content">8m</div>
+				      	<h4 class="list-group-item-heading">Tile with a label</h4>
+				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				    </div>
+			  	</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Dialog help -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="Dialog-Help">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+			    <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			    	<h4 class="modal-title">Help</h4>
+			    </div>
+			    <div class="modal-body">
+			        <p>
+			        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione veritatis a unde autem!
+			        </p>
+			    </div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-primary btn-raised" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> Ok</button>
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script  src="js/popper.min.js"></script>
+	<script type="text/javascript">
+	
+	// $(document).ready(function () {
+    //     $("#sidebar").mCustomScrollbar({
+    //         theme: "minimal"
+    //     });
+
+    //     $('#dismiss, .overlay').on('click', function () {
+    //         // hide sidebar
+    //         $('#sidebar').removeClass('active');
+    //         // hide overlay
+    //         $('.overlay').removeClass('active');
+    //     });
+
+    //     $('#sidebarCollapse').on('click', function () {
+    //         // open sidebar
+    //         $('#sidebar').addClass('active');
+    //         // fade in the overlay
+    //         $('.overlay').addClass('active');
+    //         $('.collapse.in').toggleClass('in');
+    //         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    //     });
+    // });
+	</script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+		<div class="container-fluid">
+			<h2>Formatos diarios</h2>
+			<br>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#home">Pagina 1</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu1">Pagina 2</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu2">Pagina 3</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu2">Pagina 4</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu2">Pagina 5</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu2">Pagina 6</a>
+				</li>
+			</ul>
+
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+
+
+				<div id="home" class="container tab-pane active"><br>
+
+
+
+					<div class="container-fluid">
+						<div class="row">
+
+
+							<!-- <select class="seleccion mdb-select" name="cosa" onchange="cambia()">
+						<option value="0">Seleccione</option>
+						<option value="1">UCS1 </option>
+						<option value="2">UCS2</option>
+						<option value="3">UCS3</option>
+						<option value="4">UCS4</option>
+						<option value="5">UCS5</option>
+					</select>  <br><br><br><br><br><br><br><br> -->
+
+							<!--
+
+							        <div class="col-md-4">
+          {{>stats this}}
+          {{>popular this}}
+          {{>comments this}}
+        </div>
+
+		
+							-->
+
+							<div class="col-lg-3" id="side-3">
+
+								<div class="card" style="height:390px">
+									<div class="card-header bg-dark text-white">
+										<h4 style="text-align: center">Seleccione el equipo</h4>
+									</div>
+
+									<div class="card-body">
+										<ul class="list-group list-group-flush">
+											<a href="datosUCS1" v-on:click="sumarValores"></a>
+											<li class="list-group-item">
+												<h4 style="font-weight: bold">UCS1</h4>
+												<hr>
+											</li></a>
+											<a href="#">
+												<li class="list-group-item">
+													<h4 style="font-weight: bold">UCS2</h4>
+													<hr>
+												</li>
+											</a>
+											<a href="">
+												<li class="list-group-item">
+													<h4 style="font-weight: bold">UCS3</h4>
+													<hr>
+												</li>
+											</a>
+											<a href="#">
+												<li class="list-group-item">
+													<h4 style="font-weight: bold">UCS4</h4>
+													<hr>
+												</li>
+											</a>
+											<a href="#">
+												<li class="list-group-item">
+													<h4 style="font-weight: bold">UCS5</h4>
+													<hr>
+												</li>
+											</a>
+
+										</ul>
+									</div>
+
+
+								</div>
+
+
+								<div class="card" style="height:245px">
+									<div class="card-header bg-dark text-white">
+										<h4 style="text-align: center">Opciones </h4>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">
+											<h4 style="font-weight: bold;"> <i class="fas fa-eye"></i> Ver reporte</h4>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<h4 style="font-weight: bold"><i class="fas fa-file-excel"></i> Exportar a
+												excell</h4>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<h4 style="font-weight: bold"><i class="fas fa-file-pdf"></i> Exportar a PDF
+											</h4>
+											<hr>
+										</li>
+
+									</ul>
+								</div>
+
+
+
+
+							</div>
+
+
+
+
+							<div class="col-lg-9">
+								<div class="card">
+									<div class="card-header bg-dark">
+										<h3 class="card-title text-white">
+											Ingresar datos para el equipo: {{equipo}}
+										</h3>
+									</div>
+								</div>
+
+
+
+								<div class="card-body" id="datosUCS1">
+									<!-- <div class="aplicacion">
+								<table border="1">
+								  <tr><td>Código</td><td>Descripción</td><td>Precio</td></tr>
+								  <template v-for="articulo in articulos">
+								  <tr>
+									<td>{{articulo.codigo}}</td>
+									<td>{{articulo.descripcion}}</td>
+									<td>{{articulo.precio}}</td>
+								  </tr>
+								</template>
+								</table>    
+								<form v-on:submit.prevent="agregarArticulo">
+								  <p>
+									Ingrese código:<input type="number" v-model="codigo">
+								  </p>
+								  <p>
+									Ingrese descripción:<input type="text" v-model="descripcion">
+								  </p>
+								  <p>
+									Ingrese precio:<input type="text" v-model="precio">
+								  </p>
+								  <p><input type="submit" value="Agregar"></p>
+								</form>
+							  </div> -->
+									<!-- <form class="form-inline">
+									<label class="my-4 mr-2" for="inlineFormCustomSelectPref" style ="color:black">SDD1</label>
+									<select class="custom-select my-1 mr-sm-2 form-control" id="inlineFormCustomSelectPref">
+									  <option disabled selected>Choose...</option>
+									  <option value="1">One</option>
+									  <option value="2">Two</option>
+									  <option value="3">Three</option>
+									</select>
+									<label class="my-1 mr-2" for="inlineFormCustomSelectPref" style ="color:black">SDD2</label>
+									<select class="custom-select my-1 mr-sm-2 form-control" id="inlineFormCustomSelectPref">
+									  <option disabled selected>Choose...</option>
+									  <option value="1">One</option>
+									  <option value="2">Two</option>
+									  <option value="3">Three</option>
+									</select>
+			
+								  </form> -->
+
+
+
+									<div class="card-header bg-dark">
+										<h3 class="card-title text-white">
+											SDD1
+
+										</h3>
+									</div>
+									<table id="sdd1" class="table table-dark"></table>
+									<div class="card-header bg-dark">
+										<h3 class="card-title text-white">
+											SDD2
+
+										</h3>
+									</div>
+									<table id="sdd2" class="table table-dark"></table>
+
+
+								</div>
+
+								<form class="form-register">
+									<div class="contenedor-inputs">
+										<input type="text" id="tituloVideo" placeholder="Título" class="input-100">
+										<input type="text" id="caratula" placeholder="URL Carátula" class="input-100">
+										<select class="custom-select custom-select-lg mb-3" id="slcCanales">
+											<option value="" disabled selected>Seleccione un canal</option>
+										</select>
+										<input type="text" id="visualizaciones" placeholder="Visualizaciones"
+											class="input-100">
+										<input type="text" id="duracion" placeholder="Duración HH:MM" class="input-100">
+										<input type="text" id="fechaSubido" placeholder="Subido hace X horas.."
+											class="input-100">
+										<input type="button" id="guardar" value="Guardar" class="btn-enviar">
+									</div>
+								</form>
+
+
+							</div>
+
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+				<div id="menu1" class="container tab-pane fade"><br>
+					<h3>Menu 1</h3>
+
+				</div>
+
+				<div id="menu2" class="container tab-pane fade"><br>
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam.</p>
+				</div>
+
+			</div>
+		</div>
+
+		//***********************************************************************
+			<script type="text/javascript">
+		$(document).ready(function () {
+
+			$(".list-group-item").hover(function () {
+				$(this).css("background-color", "#45B39D");
+			}, function () {
+				$(this).css("background-color", "white");
+			});
+		});
+
+
+
+		// $(".myForm").hide(); // lo primero a suceder
+		// function ShowHideElement() {
+		// 	let text = "";
+		// 	if ($("#myButton").text() === "Show form") {
+		// 		$(".myForm").show();
+		// 		text = "Hide form";
+		// 	} else {
+		// 		$(".myForm").hide();
+		// 		text = "Show form";
+		// 	}
+		// 	$(".myButton").html(text);
+		// }
+
+
+		$("#sdd1").dynamicTable({
+			//definimos las columnas iniciales    
+			columns: [{
+					text: "ESTADO",
+					key: "gender"
+				},
+				{
+					text: "LAN 1",
+					key: "gender"
+				},
+				{
+					text: "LAN 2",
+					key: "gender"
+				}
+
+
+
+
+			],
+
+			//carga de datos
+			// data: [{
+			//       name: 'José Perez',
+			//       age: 30,
+			//       gender: 'M',
+			//       pais: 'Colombia'    
+			//   },
+			//   {
+			//       name: 'María Pía',
+			//       age: 24,
+			//       gender: 'F',
+			//       pais: 'Brasil'
+			//   },
+			//   {
+			//       name: 'Pedro',
+			//       age: 31,
+			//       gender: 'M',
+			//       pais: 'Perú'
+			//   }
+			// ],
+
+			//definición de botones
+			buttons: {
+				addButton: '<input type="button" value="Nuevo" class="btn btn-success" />',
+				cancelButton: '<input type="button" value="Cancelar" class="btn btn-primary" />',
+				deleteButton: '<input type="button" value="Borrar" class="btn btn-danger" />',
+				editButton: '<input type="button" value="Editar" class="btn btn-primary" />',
+				saveButton: '<input type="button" value="Guardar" class="btn btn-success" />',
+			},
+			showActionColumn: true,
+			//condicionales
+			getControl: function (columnKey) {
+
+
+				if (columnKey == "gender") {
+					return `<select class="form-control custom-select">
+				<option disabled selected value =''>Elija una opcion</option>
+				<option value="1" style = 'background:#184414; color:white'><b>VERDE OSCURO</b></option>
+				<option value="2"  style = 'background:#86E97E; color:white'>VERDE CLARO</option>
+				<option value="3" style = 'background:#D51E1E ;color:white'>ROJO</option>
+				<option value="4"  style = 'background:#9425B8 ;color:white'>MORADO</option>
+				<option value="5">BLANCO</option>
+				<option value="6" style ='background:#2530B8 ;color:white'>AZUL</option>
+				<option value="7" style ='background:#ECF94F ;color:black'>AMARILLO</option>
+				<option value="8" style ='background:black ;color:white'>NEGRO</option>
+				<option value="9" style ='background:#949588 ;color:white'>GRIS</option>
+				</select>`;
+
+				}
+
+				return '<input type="text" class="form-control" />';
+			}
+
+		});
+
+
+		$("#sdd2").dynamicTable({
+			//definimos las columnas iniciales    
+			columns: [{
+					text: "ESTADO",
+					key: "gender"
+				},
+				{
+					text: "LAN 1",
+					key: "gender"
+				},
+				{
+					text: "LAN 2",
+					key: "gender"
+				}
+
+
+
+
+			],
+
+			buttons: {
+				addButton: '<input type="button" value="Nuevo" class="btn btn-success" />',
+				cancelButton: '<input type="button" value="Cancelar" class="btn btn-primary" />',
+				deleteButton: '<input type="button" value="Borrar" class="btn btn-danger" />',
+				editButton: '<input type="button" value="Editar" class="btn btn-primary" />',
+				saveButton: '<input type="button" value="Guardar" class="btn btn-success" />',
+			},
+			showActionColumn: true,
+			//condicionales
+			getControl: function (columnKey) {
+
+
+				if (columnKey == "gender") {
+					return `<select class="form-control custom-select">
+				<option disabled selected value =''>Elija una opcion</option>
+				<option value="1" style = 'background:#184414; color:white'><b>VERDE OSCURO</b></option>
+				<option value="2"  style = 'background:#86E97E; color:white'>VERDE CLARO</option>
+				<option value="3" style = 'background:#D51E1E ;color:white'>ROJO</option>
+				<option value="4"  style = 'background:#9425B8 ;color:white'>MORADO</option>
+				<option value="5">BLANCO</option>
+				<option value="6" style ='background:#2530B8 ;color:white'>AZUL</option>
+				<option value="7" style ='background:#ECF94F ;color:black'>AMARILLO</option>
+				<option value="8" style ='background:black ;color:white'>NEGRO</option>
+				<option value="9" style ='background:#949588 ;color:white'>GRIS</option>
+				</select>`;
+
+				}
+
+				return '<input type="text" class="form-control" />';
+			}
+
+		});
+
+
+
+		var canales = [{
+				canal: 'Fuera JOH'
+			},
+			{
+				canal: 'Anime Cool'
+			},
+			{
+				canal: 'Epica'
+			},
+			{
+				canal: 'Queen'
+			},
+			{
+				canal: 'UnSun'
+			}
+		];
+	</script>

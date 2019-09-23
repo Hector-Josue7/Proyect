@@ -1,4 +1,4 @@
-INSERT INTO `tbl_cargos` (`ID_CARGO`, `NOMBRE_CARGO`) VALUES
+ÔªøINSERT INTO `tbl_cargos` (`ID_CARGO`, `NOMBRE_CARGO`) VALUES
 (1, 'DIRECTOR EJECUTIVO'),
 (2, 'DIRECTOR DE OPERACIONES'),
 (3, 'DIRECTOR COMERCIAL - CSO'),
@@ -9,125 +9,250 @@ INSERT INTO `tbl_cargos` (`ID_CARGO`, `NOMBRE_CARGO`) VALUES
 (8, 'TECNICO DE MANTENIMIENTO'),
 (9, 'PRACTICANTE INGENIERO DE SOFTWARE');
 
+
 INSERT INTO `tbl_paises` (`ID_PAIS`, `PAIS`) VALUES
-(1, 'GUATEMALA'),
-(2, 'BELICE'),
-(3, 'EL SALVADOR'),
-(4, 'HONDURAS'),
-(5, 'NICARAGUA'),
-(6, 'COSTA RICA'),
-(7, 'PANAMA');
+(52, 'M√âXICO '),
+(501, 'BELICE'),
+(502, 'GUATEMALA'),
+(503, 'EL SALVADOR '),
+(504, 'HONDURAS'),
+(505, 'NICARAGUA'),
+(506, 'COSTA RICA'),
+(1345, 'GRAN CAIM√ÅN');
 
-INSERT INTO `tbl_ciudades` (`ID_PAIS`, `ID_CIUDAD`, `NOMBRE_CIUDAD`) VALUES
-(4, 1, 'TEGUCIGALPA'),
-(4, 2, 'SAN PEDRO SULA'),
-(4, 3, 'LA CEIBA'),
-(4, 4, 'ROATAN'),
-(4, 5, 'COMAYAGUA');
+INSERT INTO `tbl_ciudades` (`ID_CIUDAD`, `ID_PAIS`, `NOMBRE_CIUDAD`) VALUES
+(1, 504, 'TEGUCIGALPA'),
+(2, 504, 'SAN PEDRO SULA'),
+(3, 504, 'TRUJILLO'),
+(4, 504, 'LA CEIBA'),
+(5, 504, 'ROATAN '),
+(6, 503, 'CHINAMECA'),
+(7, 503, 'SAN SALVADOR'),
+(8, 503, 'SAN LUIS TALPA'),
+(9, 502, 'VILLA CANALES'),
+(10, 502, 'JUTIAPA'),
+(11, 502, 'CIUDAD DE GUATEMALA'),
+(12, 501, 'BELICE'),
+(13, 505, 'MANAGUA'),
+(14, 505, 'PUERTO CABEZAS'),
+(15, 1345, 'GEORGE TOWN'),
+(16, 505, 'BLUE FIELD'),
+(17, 505, 'TOLA'),
+(20, 506, 'GUANACASTE'),
+(21, 506, 'TARRAZU '),
+(22, 506, 'LIBERIA '),
+(23, 504, 'COMAYAGUA'),
+(24, 52, 'MERIDA'),
+(25, 506, 'ALAJUELA'),
+(26, 502, 'FLORES'),
+(27, 506, 'SAN JOSE '),
+(28, 501, 'CAYO');
 
-INSERT INTO `tbl_sitios` (`ID_CIUDAD`, `ID_SITIO`, `NOMBRE_SITIO`) VALUES
-(1, 1, 'SALA DE EQUIPOS'),
-(1, 2, 'CENTRO DE CONTROL'),
-(1, 3, 'SALA DBM, CENTRO DE CONTROL'),
-(1, 4, 'CENTRO DE CONTROL Y SIMULACI”N ');
+INSERT INTO `tbl_sitios` (`ID_SITIO`, `ID_PAIS`, `NOMBRE_SITIO`) VALUES
+(1, 504, 'CERRO MONTE CRUDO'),
+(2, 504, 'SEDE_CYN'),
+(3, 504, 'LAS CRUCES'),
+(4, 504, 'EL HORNO'),
+(5, 504, 'SEDE'),
+(6, 504, 'CALENTURA'),
+(7, 504, 'LA MESA'),
+(8, 504, 'LA CEIBA'),
+(9, 504, 'DIXON HILL'),
+(10, 504, 'TONCONTIN '),
+(11, 504, 'LCE AEROPUERTO'),
+(12, 504, 'LCE TORRE'),
+(13, 504, 'LMS LOCALIZADORES PISTA'),
+(14, 504, 'TNT TORRE'),
+(15, 504, 'AGENCIA HONDURE√ëA AERON√ÅUTICA'),
+(16, 504, 'SAUCE VOR/DME'),
+(17, 504, 'LMS TORRE'),
+(18, 504, 'LMS CENTRO DE CONTROL'),
+(19, 504, 'LMS AEROPUERTO '),
+(20, 504, 'LMS VOR/DME PISTA'),
+(21, 504, 'LMS GLIDE/SLOPE PISTA'),
+(22, 504, 'LCE VOR/DME PISTA'),
+(23, 504, 'LCE NBD/DME'),
+(24, 504, 'ROA AEROPUERTO'),
+(25, 504, 'ROA TORRE'),
+(26, 504, 'ROA VOR/DME'),
+(27, 504, 'TNT AEROPUERTO'),
+(28, 504, 'ROATAN '),
+(29, 504, 'COFAH'),
+(30, 504, 'SOTO'),
+(31, 504, 'CERRO DE HULA'),
+(32, 504, 'PEDREGAL HF'),
+(33, 504, 'PRUEBA'),
+(34, 502, 'SANTA ELENA DE BARILLA'),
+(35, 502, 'CERRO SANTIAGO'),
+(36, 502, 'AURORA'),
+(37, 502, 'NIKTUN'),
+(38, 502, 'TIKAL'),
+(39, 503, 'PACAYAL'),
+(40, 503, 'BOQUER√ìN '),
+(41, 503, 'COMALAPA'),
+(42, 503, 'ILOPANGO'),
+(43, 505, 'LAS NUBES'),
+(44, 505, 'MANAGUA'),
+(45, 505, 'PUERTO CABEZAS'),
+(46, 505, 'BLUE FIELD'),
+(47, 505, 'CORN ISLAND'),
+(48, 505, 'CERRO LAS CASITAS'),
+(49, 505, 'CERRO LA CUESTA'),
+(50, 506, 'CERRO BRUJO'),
+(51, 506, 'EL COCO'),
+(52, 506, 'MATA DE CAOBA'),
+(53, 506, 'LIBERIA '),
+(54, 506, 'CERRO BUENA VISTA'),
+(55, 501, 'BALDY BEACON'),
+(56, 501, 'BELICE'),
+(57, 1345, 'GRAN CAIMAN'),
+(58, 52, 'M√âRIDA'),
+(59, 506, 'VOLC√ÅN POAS');
 
-INSERT INTO `tbl_localidades` (`ID_SITIO`, `ID_LOCALIDAD`, `NOMBRE_LOCALIDAD`) VALUES
-(1, 1, 'LOCALIDAD 1'),
-(1, 2, 'LOCALIDAD 2'),
-(1, 3, 'LOCALIDAD 3'),
-(1, 4, 'LOCALIDAD 4');
+INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`, `ID_SITIO`,`NOMBRE_LOCALIDAD`) VALUES
+(1, 2, 'HF'),
+(2, 2, 'TOP SKY'); 
 
-INSERT INTO `tbl_unidades` (`ID_PAIS`, `ID_CIUDAD`, `ID_SITIO`, `ID_LOCALIDAD`, `ID_UNIDAD`, `NOMBRE_UNIDAD`) VALUES
-(4, 1, 1, 1, 1, 'COMUNICACI”N Y RADIO AYUDA'),
-(4, 1, 1, 1, 2, 'ENERGÕA Y EQUIPOS AUXILIARES'),
-(4, 1, 1, 2, 3, 'VIGILANCIA Y RADAR'),
-(4, 1, 2, 2, 4, 'MACC'),
-(4, 1, 3, 3, 5, 'AUTOMATIZACI”N '),
-(4, 1, 4, 4, 6, 'COMUNICACI”N ');
 
-INSERT INTO `tbl_sistemas` (`ID_UNIDAD`, `ID_LOCALIDAD`, `ID_SISTEMA`, `NOMBRE_SISTEMA`) VALUES
-(5, 1, 1, 'AIRCON 2100'),
-(5, 2, 2, 'WSACC'),
-(5, 3, 3, 'AMH'),
-(6, 1, 6, 'GAREX 300'),
-(6, 2, 7, 'SDC 2000'),
-(6, 3, 8, 'EQUIPOS AUXI ROUTER'),
-(6, 4, 9, 'EMPLAZAMIENTOS DE FRECUENCIA');
 
-INSERT INTO `tbl_formatos` (`ID_SISTEMA`, `ID_FORMATO`, `NOMBRE_FORMATO`) VALUES
+INSERT INTO `tbl_empleados` (`ID_EMPLEADO`, `ID_UNIDAD`, `ID_CARGO`, `NOMBRE`, `CORREO`, `USUARIO`, `CONTRASENA`, `ACCESO`) VALUES
+(1, 1, 8, 'Louie Liam Leannon Moen', 'louieliam@gmail.com', 'luilieliam1', 'asd.123', 1),
+(2, 1, 8, 'Darrin Hank Becker Welch', 'darrinhank@hotmail.com', 'darrinhank2', 'asd.123', 1),
+(3, 5, 8, 'Brett Jaeden Rempel Hermiston', 'brettjaedenr@gmail.com', 'brettjaeden3', 'asd.123', 1),
+(4, 5, 8, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123', 1),
+(5, 5, 8, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123', 1);
+
+INSERT INTO `tbl_sistemas` (`ID_SISTEMA`, `ID_UNIDAD`, `NOMBRE_SISTEMA`) VALUES
+(1, 1, 'AIRCON 2100'),
+(2, 2, 'VSAT'),
+(3, 2, 'VOR/DME'),
+(4, 3, 'UPS APC SYNMETRA'),
+(5, 2, 'TX HF'),
+(6, 3, 'TRANSFORMADOR DE ENTRADA ENEEE'),
+(7, 2, 'PLANTA PBX TELEF√ìNICA'),
+(8, 3, 'TANQUE DE COMBUSTIBLE'),
+(9, 3, 'SISTEMA DE TIERRA Y PROTECCI√ìN'),
+(10, 3, 'SISTEMA CONTRA INCENDIOS, ARIES');
+
+INSERT INTO `tbl_formatos` (`ID_FORMATO`, `ID_SISTEMA`, `NOMBRE_FORMATO`) VALUES
 (1, 1, 'DIARIO 1-1'),
-(1, 2, 'DIARIO 1-2'),
-(1, 3, 'DIARIO 1-3'),
-(1, 4, 'DIARIO 1-4'),
-(1, 5, 'DIARIO 1-5'),
-(1, 6, 'DIARIO 1-6'),
-(10, 7, 'SEMANAL 3-1'),
-(1, 8, 'SEMANAL 3-2'),
-(11, 9, 'MENSUAL 4'),
-(1, 10, 'MENSUAL 5-1');
+(2, 1, 'DIARIO 1-2'),
+(3, 1, 'DIARIO 1-3'),
+(4, 1, 'DIARIO 1-4'),
+(5, 1, 'DIARIO 1-5'),
+(6, 1, 'DIARIO 1-6'),
+(7, 1, 'SEMANAL 1'),
+(8, 1, 'SEMANAL 3'),
+(9, 1, 'SEMANAL 3-1'),
+(10, 1, 'SEMANAL 3-2'),
+(11, 1, 'MENSUAL 1-1'),
+(12, 1, 'MENSUAL 1-2'),
+(13, 1, 'MENSUAL 1-3'),
+(14, 1, 'MENSUAL 1-4'),
+(15, 1, 'MENSUAL 4'),
+(16, 1, 'MENSUAL 5-1'),
+(17, 1, 'MENSUAL 6'),
+(18, 1, 'MENSUAL 7-1'),
+(19, 1, 'MENSUAL 7-2'),
+(20, 1, 'TRIMESTRAL 5-2'),
+(21, 1, 'TRIMESTRAL 8');
 
-INSERT INTO `tbl_titulos` (`ID_FORMATO`, `ID_TITULO`, `DESCRIPCION`) VALUES
-(1, 1, 'SISTEMA PRESENTACI”N DE DATOS RADAR'),
-(2, 2, 'SISTEMA PRESENTACI”N DE DATOS RADAR'),
-(3, 3, 'PRESENTACI”N PLAN DE VUELO ');
+INSERT INTO `tbl_subsistemas` (`ID_SUBSISTEMA`, `ID_SISTEMA`, `NOMBRE_SUBSISTEMA`) VALUES
+(1, 1, 'SDD'),
+(2, 1, 'PDP'),
+(3, 1, 'SDP'),
+(4, 1, 'RDCU'),
+(5, 1, 'DLS'),
+(6, 1, 'DBM');
 
-INSERT INTO `tbl_equipos` (`ID_TITULO`, `ID_EQUIPO`, `DESCRIPCION`) VALUES
-(1, 1, 'SDD1 => UCS1'),
-(1, 2, 'SDD2 => UCS1'),
-(1, 3, 'SDD3 => UCS2'),
-(1, 4, 'SDD4 => UCS2'),
-(1, 5, 'SDD5 => UCS3'),
-(1, 6, 'SDD6 => UCS3'),
-(1, 7, 'SDD7 => UCS4'),
-(1, 8, 'SDD8 => UCS4'),
-(1, 9, 'SDD9 => UCS5'),
-(1, 10, 'SDD10 => UCS5'),
-(2, 11, 'SDD11 => SPO'),
-(2, 12, 'SDD12 => SPT'),
-(2, 13, 'SDD13 => CENAMER RADIO'),
-(2, 14, 'SDD14 => ATFM'),
-(2, 15, 'SDD15 => SAR');
+INSERT INTO `tbl_unidades` (`ID_UNIDAD`, `ID_PAIS`, `ID_CIUDAD`, `ID_SITIO`, `NOMBRE_UNIDAD`) VALUES
+(1, 504, 1, 2, 'AUTOMATIZACION'),
+(2, 504, 1, 2, 'COMUNICACI√ìN Y RADIO AYUDA'),
+(3, 504, 1, 2, 'ENERG√çA Y EQUIPOS AUXILIARES'),
+(4, 504, 1, 2, 'VIGILANCIA Y RADAR'),
+(5, 504, 1, 2, 'MACC'),
+(6, 504, 1, 1, '10024 CMC'),
+(7, 504, 1, 31, '11396 CDH'),
+(8, 504, 7, 40, '121.5 BOQ'),
+(9, 504, 6, 6, '121.5 CAL'),
+(12, 504, 1, 1, '121.5 CMC'),
+(13, 502, 8, 35, '121.5 CSA'),
+(16, 1345, 9, 57, '121.5 GCM'),
+(17, 504, 10, 3, '121.5 LCR'),
+(18, 502, 11, 3, '121.5 LCR'),
+(20, 506, 16, 59, '121.5 POA'),
+(21, 505, 12, 45, '121.5 PZA'),
+(22, 504, 7, 40, '123.9 BOQ'),
+(23, 501, 13, 55, '123.9 BYB'),
+(25, 502, 8, 35, '123.9 CSA'),
+(26, 504, 10, 3, '123.9 LCR'),
+(27, 502, 11, 3, '123.9 LCR'),
+(28, 504, 6, 6, '124.1 CAL'),
+(30, 504, 14, 54, '124.1 CBV'),
+(31, 504, 1, 31, '124.1 CDH'),
+(32, 504, 1, 1, '124.1 CMC'),
+(34, 504, 15, 43, '124.1 LNB'),
+(35, 506, 16, 59, '124.1 POA'),
+(36, 504, 6, 6, '124.3 CAL'),
+(37, 1345, 9, 57, '124.3 GCM'),
+(38, 505, 12, 45, '124.3 PZA'),
+(41, 504, 4, 28, '124.3 ROA'),
+(42, 504, 1, 31, '6649 CDH'),
+(43, 504, 1, 31, '8918 CDH');
 
-INSERT INTO `tbl_sub_equipos` (`ID_EQUIPO`, `ID_SUB_EQUIPO`, `DESCRIPCION`) VALUES
-(1, 1, 'LAN 1 '),
-(1, 2, 'LAN 2'),
-(2, 13, 'LAN 1'),
-(2, 14, 'LAN 2'),
-(3, 15, 'LAN 1'),
-(3, 16, 'LAN 2'),
-(4, 17, 'LAN 1'),
-(4, 18, 'LAN 2'),
-(5, 19, 'LAN 1'),
-(5, 20, 'LAN 2'),
-(6, 21, 'LAN 1'),
-(6, 22, 'LAN 2'),
-(7, 23, 'LAN 1'),
-(7, 24, 'LAN 2'),
-(8, 25, 'LAN 1'),
-(8, 26, 'LAN 2'),
-(9, 27, 'LAN 1'),
-(9, 28, 'LAN 2'),
-(10, 29, 'LAN 1'),
-(10, 30, 'LAN 2');
+INSERT INTO `tbl_equipos` (`ID_EQUIPO`, `ID_SUBSISTEMA`, `NOMBRE_EQUIPO`, `UBICACION_FISICA`) VALUES
+(1, 1, 'SDD1', 'UCS1'),
+(2, 1,'SDD2', 'UCS1');
+
+INSERT INTO `tbl_componente_final` (`ID_COMPONENTE`, `ID_EQUIPO`, `DESCRIPCION`) VALUES
+(1, 1, 'LAN 1'),
+(2, 1, 'LAN 2'),
+(3, 1, 'ESTADO');
 
 INSERT INTO `tbl_definicion_parametros` (`ID_DEF_PARAMETRO`, `NOMBRE_PARAMETRO`) VALUES
 (1, 'BOOLEANO'),
 (2, 'LISTA'),
-(3, 'ENTERO'),
-(4, 'FLOTANTE');
+(3, 'ENTERO/FLOTANTE'),
+(4, 'CADENA/TEXTO');
 
-INSERT INTO `tbl_diccionario` (`ID_DEF_PARAMETRO`, `ID_1`, `ID_2`, `VALOR_T`, `VALOR_NUMERICO`, `VALOR_LISTA`) VALUES
-(1, 1, 1, 'OK', NULL, NULL),
-(1, 1, 2, 'NOK', NULL, NULL),
-(1, 2, 1, 'ON', NULL, NULL),
-(1, 2, 2, 'OFF', NULL, NULL),
-(1, 3, 1, 'BLANCO', NULL, NULL),
-(1, 3, 2, 'NEGRO', NULL, NULL),
-(4, 1, 1, 'MINIMO', '10.0', NULL),
-(4, 1, 2, 'MAXIMO', '13.5', NULL),
-(4, 2, 1, 'MINIMO', '100', NULL),
-(4, 2, 2, 'MAXIMO', '130', NULL),
-(2, 1, 1, NULL, NULL, 'VERDE OCURO');
+INSERT INTO `tbl_diccionario` (`ID_VALOR`, `ID_DEF_PARAMETRO`, `SUBTIPO`, `VALOR`, `VALOR_CADENA`, `VALOR_NUMERICO`, `MINIMO/MAXIMO`) VALUES
+(1, 1, 1, 1, 'OK', NULL, NULL),
+(2, 1, 1, 2, 'NOK', NULL, NULL),
+(3, 1, 2, 1, 'ON', NULL, NULL),
+(4, 1, 2, 2, 'OFF', NULL, NULL),
+(5, 1, 2, 3, 'BLK', NULL, NULL),
+(6, 1, 3, 1, 'BLANCO', NULL, NULL),
+(7, 1, 3, 2, 'NEGRO', NULL, NULL),
+(8, 2, 1, 1, 'VERDE OSCURO', NULL, NULL),
+(9, 2, 1, 2, 'VERDE CLARO', NULL, NULL),
+(10, 2, 1, 3, 'ROJO', NULL, NULL),
+(11, 2, 1, 4, 'MORADO', NULL, NULL),
+(12, 2, 1, 5, 'BLANCO', NULL, NULL),
+(13, 2, 1, 6, 'AZUL', NULL, NULL),
+(14, 2, 1, 7, 'AMARILLO', NULL, NULL),
+(15, 2, 1, 8, 'NEGRO', NULL, NULL),
+(16, 2, 1, 9, 'GRIS', NULL, NULL),
+(17, 2, 2, 1, 'BAJO', NULL, NULL),
+(18, 2, 2, 2, 'MEDIO', NULL, NULL),
+(19, 2, 2, 3, 'ALTO', NULL, NULL),
+(20, 3, 1, 1, NULL, '10.0', 'MINIMO'),
+(21, 3, 1, 2, NULL, '13.5', 'MAXIMO'),
+(22, 3, 2, 1, NULL, '100', 'MINIMO'),
+(23, 3, 2, 2, NULL, '130', 'MAXIMO');
+
+
+INSERT INTO `tbl_master` (`ID_MASTER`, `ID_EMPLEADO`, `ID_SITIO`, `ID_FORMATO`, `ID_DEF_PARAMETRO`, `ID_VALOR`, `ID_SISTEMA`, `ID_COMPONENTE`, `ID_EQUIPO`, `MASTER_VALOR`, `FECHA_AUTOMATICA`) VALUES
+(1, 2, 2, 1, 2, 14, 1, 1, 1, 'aqui va el dato real', '2019-09-06 08:42:32');
+
+
+
+
+
+
+
+
+
+
 
 
 

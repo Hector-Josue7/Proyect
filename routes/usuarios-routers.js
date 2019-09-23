@@ -6,13 +6,13 @@ var credenciales = {
     user:"root",
     password:"",
     port:"3306",
-    database: "bd_rutinas"
+    database: "bd_rutinasV3"
   };
   // ejemplo de ruta para obtener todos los elementos de la base de datos
-router.get("/usuarios", function(req,res){  // http://localhost:4000/users/usuarios
+router.get("/usuariosi", function(req,res){  // http://localhost:4000/usuarios/usuariosi
     var conexion = mysql.createConnection(credenciales);
     conexion.query(
-        "SELECT * FROM `tbl_unidades`",
+        "SELECT * FROM `tbl_formatos`",
         [], (error, data, fields)=>{
             console.log(error);
             res.send(data);
@@ -21,12 +21,11 @@ router.get("/usuarios", function(req,res){  // http://localhost:4000/users/usuar
         });
 });
 // ejemplo de ruta para obtener un elemento en especifico de la base de datos 
-router.get("/mensajes/:formato",function(req, res){   // http://localhost:4000/users/mensajes
+router.get("/unidad/:_id",function(req, res){   // http://localhost:4000/ensayo/unidad/_id
     var conexion = mysql.createConnection(credenciales);
     conexion.query(
-        `SELECT * FROM tbl_pantalla_datos_radar
-WHERE ID_FORMATO=?;`,
-        [req.params.formato],
+        `SELECT * FROM tbl_unidades WHERE ID_UNIDAD = ?`,
+        [req.params._id],
         function(error, data, fields){
             res.send(data);
             res.end();
@@ -61,4 +60,15 @@ router.put("/actualizar", (req, res)=>{ // http://localhost:4000/users/actualiza
    }});
 })
 
+// ejemplo de ruta para eliminar de la base de datos 
+router.delete("/:id",function(req, res){
+    var sql = "DELETE FROM tbl_ciudades WHERE ID_CIUDAD = ?";
+    var conexion = mysql.createConnection(credenciales);
+    conexion.query(sql, [req.params.id],  (error, data, fields)=>{
+        console.log(error);
+        res.send(data);
+        res.end();
+        conexion.end();
+    })
+});
 module.exports = router;

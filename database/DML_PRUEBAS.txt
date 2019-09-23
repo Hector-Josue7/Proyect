@@ -1,166 +1,115 @@
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR EJECUTIVO');
-  insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE OPERACIONES');
-  insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR COMERCIAL - CSO');
- insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE MARKETING');
- insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR DE RECURSOS HUMANOS');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('CUSTOMER SUCCESS (CS)');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('DIRECTOR FINANCIERO');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('TECNICO DE MANTENIMIENTO');
-insert into tbl_cargos(NOMBRE_CARGO) 
- values ('PRACTICANTE INGENIERO DE SOFTWARE');
+ï»¿INSERT INTO `tbl_cargos` (`ID_CARGO`, `NOMBRE_CARGO`) VALUES
+(1, 'DIRECTOR EJECUTIVO'),
+(2, 'DIRECTOR DE OPERACIONES'),
+(3, 'DIRECTOR COMERCIAL - CSO'),
+(4, 'DIRECTOR DE MARKETING'),
+(5, 'DIRECTOR DE RECURSOS HUMANOS'),
+(6, 'CUSTOMER SUCCESS (CS)'),
+(7, 'DIRECTOR FINANCIERO'),
+(8, 'TECNICO DE MANTENIMIENTO'),
+(9, 'PRACTICANTE INGENIERO DE SOFTWARE');
 
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA TEGUGIGALPA', 'cocesnateg@hotmail.com', 11223344, 'HONDURAS', 'FRANCISCO MORAZAN', 'TEGUCIGALPA', 'ASD.456', 1234567 );
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA SAN PEDRO SULA', 'cocesnasps@hotmail.com', 11223355, 'HONDURAS', 'CORTES', 'SAN PEDRO SULA', 'ASD.4567', 12345678 );
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA LA CEIBA', 'cocesnaceiba@hotmail.com', 99223355, 'HONDURAS', 'ATLANTIDA', 'LA CEIBA', 'ASDG.4567', 123456788 );
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA COPAN', 'cocesnacopan@hotmail.com', 88220055, 'HONDURAS', 'COPAN', 'SANTA ROSA', 'ASDG.45675', 1234567880 );
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA CHOLUTECA', 'cocesnacopan@hotmail.com', 88220055, 'HONDURAS', 'COPAN', 'SANTA ROSA', 'ASDG.45675', 1234567880 );
-insert into tbl_estaciones(NOMBRE, CORREO, TELEFONO, PAIS, PROVINCIA_O_DEPARTAMENTO, LOCALIDAD, RTN, CAI) 
- values ('COCESNA OLANCHO', 'cocesnaolan@hotmail.com', 88227855, 'HONDURAS', 'OLANCHO', 'CATACAMAS', 'ASDG.4567135', 12345678801 );
+INSERT INTO `tbl_paises` (`ID_PAIS`, `PAIS`) VALUES
+(1, 'GUATEMALA'),
+(2, 'BELICE'),
+(3, 'EL SALVADOR'),
+(4, 'HONDURAS'),
+(5, 'NICARAGUA'),
+(6, 'COSTA RICA'),
+(7, 'PANAMA');
 
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('Se arruino la ucs 1 y se tiene que hacer el traslado a la ucs 2 del tecnico', '2018-07-25', '2019-06-27');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('Hay que elaborar el sistema para los planes de vuelo, no estar haciendoolo en papel sino que de forma automatizada', '
-2018-11-14', '2018-12-17');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('Hay que reparar el radar ISO4001', '2018-12-14', '2019-04-22');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('soporte y atención a los usuarios', '2018-09-19', '2019-07-12');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('prestación de servicios como impresión', '2019-01-08', '2019-06-15');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('Diseñar, analizar e implementar nuevos sistemas automatizados según las necesidades de las áreas solicitantes, así como actualizar los ya existentes.', '2018-08-14', '2019-04-26');
-insert into tbl_actividades(DESCRIPCION, FECHA_INICIO, FECHA_PROPUESTA_FINAL) 
- values ('Propiciar acciones para el mantenimiento óptimo de los sistemas ya implantados.', '2018-11-02', '2018-11-06');
-
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (9, 1, 'Héctor Josué', 'Ardón Morga', 'hectorjosuea@hotmail.com','2019-01-11 08:00:01', '2019-01-11 17:07:01', 12345678, 99001122);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (2, 1, 'Kaitlin Wellington', ' Gerlach Rippin', 'kaitlinw@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:02', 21234567, 987654321);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (3, 2, 'Dante Adaline', 'Goldner Cassin', 'adaline@hotmail.com','2019-01-11 08:01:02', '2019-01-11 17:08:02', 21234565,3658124188);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (1, 1, 'Rosie Forrest ', 'Schuster Gulgowski', 'rosieforrest@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (8, 1, 'Joanie Sierra', 'Gutmann Walker', 'joaniesierra@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (8, 1, 'Elouise Liam', 'Schmidt Carter', 'elouiseliam@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (2, 1, 'Brook Alfredo', 'Haag Leuschke', 'brookalfredo@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (3, 2, 'Wilton Christa', 'Rogahn Lind', 'wiltonchrista@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (4, 2, 'Dimitri Amalia', 'Cassin Zboncak', 'dimitriamalia@hotmail.com','2019-01-11 08:01:01', '2019-01-11 17:08:01', 91011121, 14151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (8, 1, 'Iva Mittie', 'Langworth Rowe', 'ivamittie@hotmail.com','2019-01-11 08:06:45', '2019-01-11 17:12:01', 91011120, 24151617);
-insert into tbl_empleados(ID_CARGO, ID_ESTACION, NOMBRE, APELLIDO, CORREO, HORA_ENTRADA, HORA_SALIDA, TELEFONO_FIJO, TELEFONO_MOVIL)
-values (8, 1, 'Daphnee Alec ', 'Schroeder Ward', 'daphneealec@hotmail.com','2019-01-11 08:06:45', '2019-01-11 17:12:01', 91011120, 24151617);
+INSERT INTO `tbl_ciudades` (`ID_PAIS`, `ID_CIUDAD`, `NOMBRE_CIUDAD`) VALUES
+(4, 1, 'TEGUCIGALPA'),
+(4, 2, 'SAN PEDRO SULA'),
+(4, 3, 'LA CEIBA'),
+(4, 4, 'ROATAN'),
+(4, 5, 'COMAYAGUA');
 
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('SALA DE EQUIPOS');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('DIRECCIÓN GENERAL');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('ADMINISTRACIÓN Y RECURSOS HUMANOS');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('PRODUCCIÓN');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('FINANZAS Y CONTABILIDAD');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('PUBLICIDAD Y MERCADOTECNIA');
-insert into tbl_sitios(NOMBRE_SITIO) 
- values ('INFORMATICA');
+INSERT INTO `tbl_sitios` (`ID_CIUDAD`, `ID_SITIO`, `NOMBRE_SITIO`) VALUES
+(1, 1, 'CDH'),
+(1, 2, 'SEDE'),
+(1, 3, 'ELSAN CE-VUR'),
+(1, 4, 'COFAH'),
+(1, 5, 'TNT TWR'),
+(1, 6, 'TNT PLAN'),
+(1, 7, 'PEDREGAL');
 
-insert into tbl_equipos(ID_SITIO, NOMBRE_EQUIPO, AIRCON)
-values (1, 'AIRCON 2100' , 'SDD');
-insert into tbl_equipos(ID_SITIO, NOMBRE_EQUIPO, AIRCON)
-values (1, 'AIRCON 2100' , 'PDP');
-insert into tbl_equipos(ID_SITIO, NOMBRE_EQUIPO, AIRCON)
-values (1, 'AIRCON 2100' , 'SDP');
-insert into tbl_equipos(ID_SITIO, NOMBRE_EQUIPO, AIRCON)
-values (1, 'AIRCON 2100' , 'RDCU');
-insert into tbl_equipos(ID_SITIO, NOMBRE_EQUIPO, AIRCON)
-values (1, 'AIRCON 2100' , 'DLS');
+INSERT INTO `tbl_localidades` (`ID_SITIO`, `ID_LOCALIDAD`,`NOMBRE_LOCALIDAD`) VALUES
+(2,1, 'HF'),
+(2,2, 'TOP SKY'); 
 
-insert into tbl_permisos(ID_CARGO, PERMISO_DIARIO)
-values (8, 'X');
-insert into tbl_permisos(ID_CARGO, PERMISO_SEMANAL)
-values (8, 'X');
-insert into tbl_permisos(ID_CARGO, PERMISO_MENSUAL)
-values (2, 'X');
+INSERT INTO `tbl_unidades` (`ID_PAIS`, `ID_CIUDAD`, `ID_SITIO`, `ID_UNIDAD`, `NOMBRE_UNIDAD`) VALUES
+(4, 1, 2, 1, 'AUTOMATIZACION'),
+(4, 1, 2, 2, 'COMUNICACIÃ“N Y RADIO AYUDA'),
+(4, 1, 2, 3, 'ENERGÃA Y EQUIPOS AUXILIARES'),
+(4, 1, 2, 4, 'VIGILANCIA Y RADAR'),
+(4, 1, 2, 5, 'MACC');
 
+INSERT INTO `tbl_sistemas` (`ID_SITIO`, `ID_UNIDAD`, `ID_SISTEMA`, `NOMBRE_SISTEMA`) VALUES
+('2', '1', 1, 'AIRCON 2100'),
+('2', '1', 2, 'AIRCON 2100 DIFUSORES'),
+('2', '1', 3, 'DBM');
 
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '1-1');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, ' DIARIO 1-2');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '1-3');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '1-4');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '1-5');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '1-6');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '3-1');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (8, '3-2');
-insert into tbl_formatos(ID_CARGO, NOMBRE_FORMATO)
-values (2, '4');
+INSERT INTO `tbl_formatos` (`ID_SISTEMA`, `ID_FORMATO`, `NOMBRE_FORMATO`) VALUES
+(1, 1, 'DIARIO 1-1'),
+(1, 2, 'DIARIO 1-2'),
+(1, 3, 'DIARIO 1-3'),
+(1, 4, 'DIARIO 1-4'),
+(1, 5, 'DIARIO 1-5'),
+(1, 6, 'DIARIO 1-6'),
+(1, 8, 'SEMANAL 3-2'),
+(2, 9, 'MENSUAL 4'),
+(1, 10, 'MENSUAL 5-1');
 
+INSERT INTO `tbl_titulos` (`ID_FORMATO`, `ID_TITULO`, `DESCRIPCION`) VALUES
+(1, 1, 'SISTEMA PRESENTACION DE DATOS RADAR'),
+(2, 2, 'SISTEMA PRESENTACION DE DATOS RADAR'),
+(3, 3, 'PRESENTACION PLAN DE VUELO ');
 
-insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
-values (5, 8, 1 ,'joanieSierra1', 'asd.1234');
-insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
-values (6, 8, 1 ,'elouiseLiam2', 'asd.12345');
-insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
-values (6, 8, 1 ,'elouiseLiam2', 'asd.12345');
-insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
-values (10, 8, 1 ,'ivamitie43', 'asd.123456');
-insert into tbl_usuarios_del_sistema(ID_EMPLEADO, ID_CARGO, ID_ESTACION, USUARIO, CONTRASENA)
-values (11, 8, 1 ,'daphnee2019', 'asd.1234567');
+INSERT INTO `tbl_equipos` (`ID_TITULO`, `ID_EQUIPO`, `DESCRIPCION`) VALUES
+(1, 1, 'SDD1 => UCS1'),
+(1, 2, 'SDD2 => UCS1'),
+(1, 3, 'SDD3 => UCS2'),
+(1, 4, 'SDD4 => UCS2'),
+(1, 5, 'SDD5 => UCS3'),
+(1, 6, 'SDD6 => UCS3'),
+(1, 7, 'SDD7 => UCS4'),
+(1, 8, 'SDD8 => UCS4'),
+(1, 9, 'SDD9 => UCS5'),
+(1, 10, 'SDD10 => UCS5'),
+(2, 11, 'SDD11 => SPO'),
+(2, 12, 'SDD12 => SPT'),
+(2, 13, 'SDD13 => CENAMER RADIO'),
+(2, 14, 'SDD14 => ATFM'),
+(2, 15, 'SDD15 => SAR');
 
-insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
-values (1, 5, 8, 1);
-insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
-values (2, 5, 8, 1);
-insert into tbl_actividades_has_tbl_empleados(ID_ACTIVIDAD, ID_EMPLEADO, ID_CARGO, ID_ESTACION)
-values (1, 6, 8, 1);
+INSERT INTO `tbl_sub_equipos` (`ID_EQUIPO`, `ID_SUB_EQUIPO`, `DESCRIPCION`) VALUES
+(1, 1, 'LAN 1 '),
+(1, 2, 'LAN 2'),
+(2, 3, 'LAN 1'),
+(2, 4, 'LAN 2'),
+(3, 5, 'LAN 1'),
+(3, 6, 'LAN 2'),
+(4, 7, 'LAN 1'),
+(4, 8, 'LAN 2'),
+(5, 9, 'LAN 1'),
+(5, 10, 'LAN 2'),
+(6, 11, 'LAN 1'),
+(6, 12, 'LAN 2'),
+(7, 13, 'LAN 1'),
+(7, 14, 'LAN 2'),
+(8, 15, 'LAN 1'),
+(8, 16, 'LAN 2'),
+(9, 17, 'LAN 1'),
+(9, 18, 'LAN 2'),
+(10, 19, 'LAN 1'),
+(10, 20, 'LAN 2');
 
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (1, 'UCS1');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (1, 'UCS2');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (1, 'UCS3');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (1, 'UCS4');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (1, 'UCS5');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (2, 'SDO');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (2, 'SPT');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (2, 'CEN.RAD');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (2, 'ATFM');
-insert into tbl_estilos_formato(ID_FORMATO, NOMBRE_ESTILO)
-values (2, 'SAR');
+INSERT INTO `tbl_definicion_parametros` (`ID_DEF_PARAMETRO`, `NOMBRE_PARAMETRO`) VALUES
+(1, 'BOOLEANO'),
+(2, 'LISTA'),
+(3, 'ENTERO'),
+(4, 'FLOTANTE');
 
 
 
@@ -169,33 +118,6 @@ values (2, 'SAR');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 
 

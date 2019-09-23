@@ -1,0 +1,18 @@
+Para establecer más de un campo como clave primaria usamos la siguiente sintaxis:
+
+ create table vehiculos(
+  patente char(6) not null,
+  tipo char(4),
+  horallegada time not null
+  horasalida time,
+  primary key(patente,horallegada)
+ );
+
+ Si vemos la estructura de la tabla con "describe" vemos que en la columna "key", en ambos campos aparece "PRI", porque ambos son clave primaria
+
+ Un campo que es parte de una clave primaria puede ser autoincrementable sólo si es el primer campo que compone la clave, si es secundario no se permite.
+
+ Es posible eliminar un campo que es parte de una clave primaria, la clave queda con los campos restantes. Esto, siempre que no queden registros con clave repetida. Por ejemplo, podemos eliminar el campo "horallegada":
+
+ alter table vehiculos drop horallegada;
+siempre que no haya registros con "patente" duplicada, en ese caso aparece un mensaje de error y la eliminación del campo no se realiza.
