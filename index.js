@@ -12,17 +12,21 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 app.use("/usuarios",mensajesRouter);
 // Routes''''''''''''''''''''''''''''''''''
 //app.use(require('./routes/index'));
 //app.use(require('./routes/autenticacion-routers'));
 //app.use('/links', require('./routes/links'));
 //'''''''''''''''''''''''''''''''''''''''''''''''''''
+// require('./routes/usuarios-routers')(app);
+// app.set('views',__dirname + '/public');
+// app.set('view engine', 'ejs');
+// app.engine('html', require('ejs').renderFile);
 
-app.get('/ejs', (req, res) => {
-  res.render('index', {foo: 'FOO'});
-});
+// app.get('/ejs', (req, res) => {
+//   res.render('index', {foo: 'FOO'});
+// });
 // carpeta publica de archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
