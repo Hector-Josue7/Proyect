@@ -1,0 +1,85 @@
+INSERT INTO `tbl_sitios` (`ID_SITIO`, `ID_CIUDAD`, `NOMBRE_SITIO`, `TRILITERAL`) VALUES
+-- HONDURAS >> TEGUCIGALPA
+(1, 1, 'SEDE', 'CEN'),
+-- HONDURAS >> SAN PEDRO SULA
+(2, 2, 'LA MESA', 'LLL'),
+-- HONDURAS >> ROATAN
+(3, 5, 'ROATAN', 'RRR')
+-- EL SALVADOR >> SAN SALVADOR
+(4, 8, 'ILOPANGO', 'ILO'),
+(5, 8, 'PACAYAL', 'PCY'),
+-- EL SALVADOR >> SAN LUIS TALPA
+(6, 9, 'COMALAPA', 'SAL'),
+-- GUATEMALA >> CIUDAD DE GUATEMALA
+(7, 11, 'AURORA', 'AUR'),
+-- GUATEMALA >> FLORES
+(8, 14, 'TIKAL', 'TKL'),
+-- BELICE >> BELICE
+(9, 15, 'BELICE', 'BZE'),
+-- NICARAGUA >> MANAGUA
+(10, 17, 'MANAGUA', 'MNG'),
+-- COSTA RICA >> GUANACASTE
+(11, 22, 'EL COCO', 'OCO'),
+-- COSTA RICA >> SAN JOSÉ
+(12, 26, 'CERRO BUENA VISTA', 'CBV')
+-- MEXICO >> MERIDA
+(13, 28, 'MERIDA', 'MID'),
+(14, 29, 'VOLCÁN POAS', 'POA');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
