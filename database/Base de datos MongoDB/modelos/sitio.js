@@ -6,7 +6,8 @@ var esquema = new mongoose.Schema(
         codigo_ciudad: {type: Schema.Types.ObjectId, ref: 'ciudades', required: false}, 
         nombre_sitio: String,
         triliteral: String,
-        localidades: Array 
+        localidades: Array,
+        unidades: Array 
 
     }
 );

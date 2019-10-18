@@ -1,6 +1,6 @@
 INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`,`ID_PAIS`,`ID_SITIO`, `NOMBRE_LOCALIDAD`, `TRILITERAL`) VALUES
 -- HONDURAS >> TEGUCIGALPA >> SEDE
-(1,504,1, 'CERRO MONTE CRUDO', 'CMC'),
+(1,504,1, 'CERRO MONTE CRUDO', 'CMC'),  
 (2, 504, 1, 'SEDE_CYN', 'C Y N'),
 (3, 504, 1, 'EL HORNO', 'EHR'),
 (4,504, 1, 'DIXON HILL', 'DIX'),
@@ -53,7 +53,7 @@ INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`,`ID_PAIS`,`ID_SITIO`, `NOMBRE_LOCA
 (44, 506, 11, 'LIBERIA', 'LIB' );
 
 
-
+// añadir coordenadas, latitud, longitud y altitud
 
 
 
