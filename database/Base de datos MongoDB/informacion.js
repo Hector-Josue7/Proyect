@@ -3,19 +3,21 @@ db.createCollection('cargos');
 db.createCollection('paises');
 db.createCollection('ciudades');
 db.createCollection('sitios');
+db.createCollection('unidades');
+db.createCollection('empleados');
 
 
 db.cargos.insertMany([
-  {nombre_cargo: 'DIRECTOR EJECUTIVO'},
-  {nombre_cargo: 'DIRECTOR DE OPERACIONES'},
-  {nombre_cargo: 'DIRECTOR COMERCIAL - CSO'},
-  {nombre_cargo: 'DIRECTOR DE MARKETING'},
-  {nombre_cargo: 'DIRECTOR DE RECURSOS HUMANOS'},
-  {nombre_cargo: 'CUSTOMER SUCCESS (CS)'},
-  {nombre_cargo: 'DIRECTOR FINANCIERO'},
-  {nombre_cargo: 'TECNICO DE MANTENIMIENTO'},
-  {nombre_cargo: 'PRACTICANTE INGENIERO DE SOFTWARE'}
-]);
+  {_id: ObjectId("5dae6d55e425f48f298b5cc1"),nombre_cargo: 'DIRECTOR EJECUTIVO'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc2"),nombre_cargo: 'DIRECTOR DE OPERACIONES'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc3") ,nombre_cargo: 'DIRECTOR COMERCIAL - CSO'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc4"),nombre_cargo: 'DIRECTOR DE MARKETING'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc5"),nombre_cargo: 'DIRECTOR DE RECURSOS HUMANOS'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc6"),nombre_cargo: 'CUSTOMER SUCCESS (CS)'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc7"),nombre_cargo: 'DIRECTOR FINANCIERO'},
+  {_id: ObjectId("5dae6d55e425f48f298b5cc8"),nombre_cargo: 'TECNICO DE MANTENIMIENTO'},
+  {_id:ObjectId("5dae6d55e425f48f298b5cc9"),nombre_cargo: 'PRACTICANTE INGENIERO DE SOFTWARE'}
+])
 
 db.paises.insertMany(
     [{_id: ObjectId("5da8c4564b861f16ece54b12"),codigo_pais:52,nombre_pais: 'MÉXICO'},
@@ -26,7 +28,7 @@ db.paises.insertMany(
      {_id: ObjectId("5da8c4564b861f16ece54b17"),codigo_pais:505,nombre_pais: 'NICARAGUA'},
      {_id: ObjectId("5da8c4564b861f16ece54b18"),codigo_pais:506,nombre_pais: 'COSTA RICA'},
      {_id: ObjectId("5da8c4564b861f16ece54b19"),codigo_pais:1345,nombre_pais: 'GRAN CAIMAN'}
-    ]);
+    ])
 
 db.ciudades.insertMany([ 
      {codigo_pais: {_id: ObjectId("5da8c4564b861f16ece54b16"),nombre_pais: 'HONDURAS'},nombre_ciudad: 'TEGUCIGALPA'},
@@ -58,7 +60,7 @@ db.ciudades.insertMany([
      {codigo_pais: {_id: ObjectId("5da8c4564b861f16ece54b19"),nombre_pais: 'GRAN CAIMAN'},nombre_ciudad: 'GEORGE TOWN'},
      {codigo_pais: {_id: ObjectId("5da8c4564b861f16ece54b12"),nombre_pais: 'MÉXICO'},nombre_ciudad: 'MERIDA'},
      {codigo_pais: {_id: ObjectId("5da8c4564b861f16ece54b12"),nombre_pais: 'MÉXICO'},nombre_ciudad: 'CIUDAD DESCONOCIDA MEXICO'}
-    ]);
+    ])
 
 
 db.sitios.insertMany([
@@ -84,13 +86,7 @@ db.sitios.insertMany([
          {nombre_localidad: 'CERRO DE HULA',triliteral: 'CDH'},
          {nombre_localidad: 'PEDREGAL HF',triliteral: 'PED'},
          {nombre_localidad: 'CERRO LAS CASITAS',triliteral: 'LCA'}],
-      unidades:[
-         {nombre_unidad: 'AUTOMATIZACION'},
-         {nombre_unidad: 'COMUNICACION Y RADIO AYUDA'},
-         {nombre_unidad: 'ENERGIA Y EQUIPOS AUXILIARES'},
-         {nombre_unidad: 'VIGILANCIA Y RADAR'},
-         {nombre_unidad: 'MACC'}
-      ]
+
          
     },
     { 
@@ -109,16 +105,16 @@ db.sitios.insertMany([
                            {nombre_localidad: 'LMS VOR/DME PISTA',triliteral: 'LMS VOR/DME PISTA'},
                            {nombre_localidad: 'LMS GLIDE/SLOPE PISTA',triliteral: 'LMS GLIDE/SLOPE PISTA'},
                            {nombre_localidad: 'LMS VOR/DME PISTA',triliteral: 'LMS VOR/DME PISTA'},
-                           {nombre_localidad: 'LCE NBD/DME',triliteral: 'LCE NBD/DME'}],
-             unidades: []    
+                           {nombre_localidad: 'LCE NBD/DME',triliteral: 'LCE NBD/DME'}]
+    
     },
    {
   
       codigo_ciudad: {_id:  ObjectId("5daa36da4b861f16ece54b4a"), nombre_ciudad: 'ROATAN'},
       nombre_sitio: 'ROATAN',
       triliteral: 'RRR',
-      localidades:[],
-      unidades: []
+      localidades:[]
+
     },
     {
     codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b4d"), nombre_ciudad:'SAN SALVADOR'},
@@ -126,15 +122,15 @@ db.sitios.insertMany([
     triliteral: 'ILO',
     localidades: [
                {nombre_localidad: 'PACAYAL',triliteral: 'PCY'},
-               {nombre_localidad: 'BOQUERON',triliteral: 'BOQ'} ],
-               unidades: []
+               {nombre_localidad: 'BOQUERON',triliteral: 'BOQ'} ]
+   
    },
    {
       codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b4e"), nombre_ciudad: 'SAN LUIS TALPA'},
       nombre_sitio: 'COMALAPA',
       triliteral: 'SAL',
-      localidades:[],
-      unidades: []
+      localidades:[]
+     
    },
    {
      codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b5b"), nombre_ciudad: 'GUANACASTE'},
@@ -143,8 +139,8 @@ db.sitios.insertMany([
      localidades: [
             {nombre_localidad: 'CERRO BRUJO', triliteral: 'BRU'},
             {nombre_localidad: 'MATA DE CAÑA', triliteral: 'MAT'},
-            {ombre_localidad: 'LIBERIA', triliteral: 'LIB'}],
-      unidades: []
+            {ombre_localidad: 'LIBERIA', triliteral: 'LIB'}]
+
    },
    {
       codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b50"), nombre_ciudad: 'CIUDAD DE GUATEMALA'},
@@ -153,23 +149,23 @@ db.sitios.insertMany([
       localidades:[
             {nombre_localidad: 'SANTA ELENA DE BARILLA',triliteral: 'SEL'},
             {nombre_localidad: 'CERRO SANTIAGO',triliteral: 'CSA'},
-            {nombre_localidad: 'NIKTUN',triliteral: 'NIK'}],
-            unidades: []
+            {nombre_localidad: 'NIKTUN',triliteral: 'NIK'}]
+     
     },
     {
     codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b53"), nombre_ciudad: 'FLORES'},
     nombre_sitio: 'TIKAL',
     triliteral: 'TKL',
-    localidades: [],
-    unidades: []
+    localidades: []
+  
     },
     {
    codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b54"), nombre_ciudad: 'BELICE'},
    nombre_sitio: 'BELICE',
    triliteral: 'BZE',
    localidades: [
-             {nombre_localidad: 'BALDY BEACON', triliteral: 'BYB'}],
-   unidades: []
+             {nombre_localidad: 'BALDY BEACON', triliteral: 'BYB'}]
+
    },
    {
     codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b56"), nombre_ciudad: 'MANAGUA'},
@@ -180,22 +176,22 @@ db.sitios.insertMany([
                {nombre_localidad: 'PUERTO CABEZAS', triliteral: 'PZA'},
                {nombre_localidad: 'BLUE FIELD', triliteral: 'BLU'},
                {nombre_localidad: 'CORN ISLAND', triliteral: 'CRN'},
-               {nombre_localidad: 'CERRO LA CUESTA', triliteral: 'CLC'}],
-    unidades: []
+               {nombre_localidad: 'CERRO LA CUESTA', triliteral: 'CLC'}]
+
      },
      {
       codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b5f"), nombre_ciudad: 'SAN JOSE'},
       nombre_sitio: 'CERRO BUENA VISTA',
       triliteral: 'CBV',
-      localidades: [],
-      unidades: []
+      localidades: []
+   
       },
       {
        codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b61"), nombre_ciudad: 'MERIDA'},
        nombre_sitio: 'MERIDA',
        triliteral: 'MID',
-       localidades: [],
-       unidades: []
+    
+ 
       },
        {
          codigo_ciudad: {_id: ObjectId("5daa36da4b861f16ece54b61"), nombre_ciudad: 'MERIDA'},
@@ -205,6 +201,18 @@ db.sitios.insertMany([
          unidades: []
        }
    
-]);
+])
 
-db.empleados.insertMany
+db.unidades.insertMany([
+  {codigo_sitio:{ _id: ObjectId("5dae7032e425f48f298b5ce7"), nombre_sitio: 'SEDE'}, nombre_unidad: 'AUTOMATIZACION'},
+  {codigo_sitio:{ _id: ObjectId("5dae7032e425f48f298b5ce7"), nombre_sitio: 'SEDE'}, nombre_unidad: 'ENERGIA Y EQUIPOS AUXILIARES'},
+  {codigo_sitio:{ _id: ObjectId("5dae7032e425f48f298b5ce7"), nombre_sitio: 'SEDE'}, nombre_unidad: 'MACC'},
+  {codigo_sitio:{ _id: ObjectId("5dae7032e425f48f298b5ce8"), nombre_sitio: 'LA MESA'}, nombre_unidad: 'COMUNICACION Y RADIO AYUDA'},
+  {codigo_sitio:{ _id: ObjectId("5dae7032e425f48f298b5ce8"), nombre_sitio: 'LA MESA'}, nombre_unidad: 'VIGILANCIA Y RADAR'}])
+
+db.empleados.insertMany([
+{
+
+
+}
+]);
