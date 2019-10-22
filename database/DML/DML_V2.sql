@@ -114,7 +114,7 @@ INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`,`ID_PAIS`,`ID_SITIO`, `NOMBRE_LOCA
 
 INSERT INTO `tbl_unidades` (`ID_UNIDAD`,`ID_SITIO`, `NOMBRE_UNIDAD`) VALUES
 (1,1, 'AUTOMATIZACIÓN '),
-(2,1, 'ENERGÍA Y EQUIPOS AUXILIARES '),
+(2,1, 'ENERGÍA Y EQUIPOS AUXILIARES'),
 (3,1, 'MACC');
 (4,2, 'COMUNICACIÓN Y RADIO AYUDA'),
 (5,2, 'VIGILANCIA Y RADAR'),
@@ -128,8 +128,8 @@ INSERT INTO `tbl_empleados` (`ID_EMPLEADO`, `ID_UNIDAD`, `ID_CARGO`, `NOMBRE`, `
 (5, 5, 8, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123', 1);
 
 INSERT INTO `tbl_sistemas` (`ID_SISTEMA`, `ID_UNIDAD`, `NOMBRE_SISTEMA`) VALUES
-(1, 2, 'PLANTA PBX TELEFÓNICA '),
-(2, 2, 'VSAT '),
+(1, 2, 'PLANTA PBX TELEFÓNICA'),
+(2, 2, 'VSAT'),
 (3, 2, 'VOR/DME'),
 (4, 3, 'UPS APC SYNMETRA'),
 (5, 3, 'UPS'),
