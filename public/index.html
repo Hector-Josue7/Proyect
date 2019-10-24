@@ -1,87 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ebcee96589.js"></script>
+
     <style>
-    .nav{
-    background-color: #336683;
-    padding: 25px;
-}
+        body {
+            padding-top: 5rem;
+            background-color: #EDF0F5;
+        }
 
-.nav-tabs {
-    border-bottom: none !important;
-}
 
-#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #336683 !important;
-    background-color: #a4d6ef !important;
-    border-color: transparent transparent #f3f3f3;
-}
-#tabs .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    color: #eee;
-    font-size: 20px;
-    background-color: #336683;
-    border: 1px solid #a4d6ef;
-    color: #a4d6ef;
-}
 
-.nav-item {
-    border-radius: 0 !important;
-}
 
-.nav-item:last-child {
-    border-top-right-radius: .5rem !important;
-    border-bottom-right-radius: .5rem !important;
-}
+        .btn-primary {
+            background-color: #4267b2;
+            border-color: #29487d;
+            font-size: .8rem;
+            font-weight: bold;
+            padding: 3px;
+            border-radius: 1px;
+        }
 
-.nav-item:first-child {
-    border-top-left-radius: .5rem !important;
-    border-bottom-left-radius: .5rem !important;
-}
+        #contenido-terminos {
+            font-size: .7rem;
+            color: rgb(97, 96, 96);
+            width: 80%;
+        }
 
-.nav-tabs .nav-link.active{
-   background-color: #a4d6ef !important; 
-}
+        #boton-sign-in {
+            background-image: linear-gradient(#74B55F, #598A45);
+            font-weight: bold;
+            padding-left: 45px;
+            padding-right: 45px;
+            margin-top: 15px;
+            border-color: rgb(60, 95, 46);
+        }
     </style>
 </head>
-<body>
-    
-<!-- Tabs -->
-<section id="tabs">
-	<div class="container">
-		<h6 class="section-title h1">Tabs</h6>
-		<div class="row">
-			<div class="col-xs-12 ">
-				<nav>
-					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-						<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">About</a>
-					</div>
-				</nav>
-				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-					</div>
-					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-					</div>
-					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</div>
-</section>
 
-<script src="js/jquery-3.3.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<body>
+    <div class="container">
+        <section class="col-md-6">
+            <div class="row" id="formulario">
+               <div class="col-4">Sitio</div>
+                <div class="col-lg-4 col-12">
+                    <select id="month" class="form-control">
+                        <option value="">Mes</option>
+                    </select>
+                    <div class="valid-feedback">Ok</div>
+                    <div class="invalid-feedback">Month is required</div>
+                </div>
+                <div class="col-4">Birthday</div>
+                <div class="col-lg-4 col-12">
+                    <select id="day" class="form-control">
+                        <option value="">Día</option>
+                    </select>
+                    <div class="valid-feedback">Ok</div>
+                    <div class="invalid-feedback">Day is required</div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <select id="year" class="form-control">
+                        <option value="">Año</option>
+                    </select>
+                    <div class="valid-feedback">Ok</div>
+                    <div class="invalid-feedback">Year is required</div>
+                </div>
+                <div class="col-12">
+                    Gender<br>
+                    <label><input name="gender" type="radio" value="F">Female</label>
+                    <label><input name="gender" type="radio" value="M">Male</label>
+                    <label><input name="gender" type="radio" value="X">Custom</label>
+                </div>
+                <div class="col-12">
+
+                    <button onclick="registrarUsuario()" type="button" id="boton-sign-in" class="btn btn-success">Sign
+                        In</button>
+                    <button style="display:none" onclick="actualizarUsuario()" type="button" id="boton-update"
+                        class="btn btn-primary">Update</button>
+                    <button style="display:none" onclick="limpiar()" type="button" id="boton-clear"
+                        class="btn btn-danger">Clear</button>
+                    <div id="resultado" class="alert alert-success" role="alert" style="display:none;">
+                        Registro guardado
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
