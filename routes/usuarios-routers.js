@@ -6,7 +6,7 @@ var credenciales = {
     user:"root",
     password:"",
     port:"3306",
-    database: "bd_rutinasV3"
+    database: "bd_rutinas"
   };
  // ejemplo de ruta para obtener todos los elementos de la base de datos
 router.get("/usuariosi", function(req,res){  // http://localhost:4000/usuarios/usuariosi
@@ -87,8 +87,26 @@ router.get("/obtenerTabla", function(req,res){ //http://localhost:4000/usuarios/
         }
     );
 });
-module.exports = router;
 
+
+
+
+router.get("/obtenersitios",function(req,res){   // http://localhost:4000/usuarios/obtenersitios
+    var conexion = mysql.createConnection(credenciales);
+   
+    conexion.query(
+        "SELECT ID_SITIO ,NOMBRE_SITIO FROM `tbl_sitios`",
+        [],
+        function(error, data, fields){
+            console.log(error);
+            res.send(data);
+            res.end();
+            conexion.end();
+        }
+    );
+
+});
+module.exports = router;
 
 
 
