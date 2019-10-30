@@ -1,0 +1,19 @@
+posiblemente la relacion entre la tabla de sitios y la tabla de unidades, sea una relacion
+de muchos a muchos ya que por sentido comun se puede decir
+un sitio puede tener muchas unidades y una unidad le puede pertenecer a muchos sitios
+
+En la tabla de listas podria ser una opcion establecer la clave primaria de esta forma
+
+1 - VERDE OSCURO
+1 - VERDE CLARO
+1 - ROJO
+1 - MORADO
+1 - BLANCO
+1 - AZUL
+1 - AMARILLO
+1 - NEGRO
+1 - GRIS
+
+2 - BAJO
+2 - MEDIO
+2 - ALTO
