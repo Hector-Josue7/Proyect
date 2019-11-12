@@ -2,7 +2,9 @@ posiblemente la relacion entre la tabla de sitios y la tabla de unidades, sea un
 de muchos a muchos ya que por sentido comun se puede decir
 un sitio puede tener muchas unidades y una unidad le puede pertenecer a muchos sitios
 
-En la tabla de listas podria ser una opcion establecer la clave primaria de esta forma
+En la tabla de listas podria ser una opcion establecer la clave primaria de esta forma,
+solo que no sabria que numero de elemento es de esa lista, solamente tiene el numero de la lista y el elemento, 
+no sabe que numero de elemento es de esa lista
 
 1 - VERDE OSCURO
 1 - VERDE CLARO
@@ -24,3 +26,26 @@ DE RECEPCION DE SATELITES VIA HTTP EN PC DE GESTOR, observar como se ve en la ta
 
 
 Tengo dudas con el formato mensual el Id=4
+
+Evaluar la relacion entre la tabla de unidades y la tabla de empleados, podria ser de muchos a muchos la relacion
+,una unidad puede tener muchos empleados y un empleado puede pertenecer a muchas unidades, 
+por ejemplo un empleado puede pertenecer a la unidad de MACC y puede pertenecer a la unidad de Informatica 
+y la unidad de MACC puede tener muchos empleados
+
+Evaluar la relacion entre la tabla empleados y la tabla master, si es de muchos a muchos seria así
+un empleado puede registrar muchos datos y un dato puede ser registrado por muchos empleados,
+la razón por la que está así es para que en la tabla master se indique el empleado que hace ese mantenimiento
+
+Se añadio una relacion entre la tabla paises y la tabla empleados, porque eso ayuda por ejemplo cuando uno ve el correo electronico
+de la empresa, cuando alguien cumple años, se ve el país y las personas que pertenecen a ese país, por eso se añadio esa relación
+
+evaluar si la relacion entre la tabla de areas y la tabla de unidades es correcta, lo que quiero decir es esto
+TBL_UNIDADES -> 1:N -> TBL_AREAS   ||    TBL_SUBUNIDADES -> 1:N -> TBL_AREAS
+la unidad puede tener muchas areas, o la subunidad puede tener muchas areas, puede ser que la tabla subunidades sea 
+innecesaria
+
+se dejo la relacion entre la tabla de equipos y master y tabla componente final y master, porque hay equipos que no necesariamente
+tengan un componente final, para los que tienen componente final por esa razon se deja relacion entre la tabla master y equipos, componente final
+y master tambien.
+
+puede ser que la relacion entre la tabla unidades y paises no sea necesaria
