@@ -6,7 +6,7 @@ module.exports = {
         user: 'root',
         password: '',
         port:"3306",
-        database: 'bd_rutinasV3'
+        database: 'bd_rutinas'
     }
 
 };
