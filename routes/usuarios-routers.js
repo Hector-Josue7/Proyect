@@ -1,16 +1,21 @@
 const express = require('express');
 const router = express.Router();
 var mysql = require("mysql");
-var credenciales = {
-    host:"localhost",
-    user:"root",
-    password:"",
-    port:"3306",
+var bcrypt = require('bcryptjs');
+
+const credenciales = {
+    host: 'localhost',
+    user: 'root',
+    password: '',
     database: "bd_rutinas"
-  };
+};
+
+
+
+
  // ejemplo de ruta para obtener todos los elementos de la base de datos
 router.get("/usuariosi", function(req,res){  // http://localhost:4000/usuarios/usuariosi
-    var conexion = mysql.createConnection(credenciales);
+     var conexion = mysql.createConnection(credenciales);
     conexion.query(
         "SELECT * FROM `tbl_formatos`",
         [], (error, data, fields)=>{
@@ -21,8 +26,8 @@ router.get("/usuariosi", function(req,res){  // http://localhost:4000/usuarios/u
         });
 });
 // ejemplo de ruta para obtener un elemento en especifico de la base de datos 
-router.get("/unidad/:_id",function(req, res){   // http://localhost:4000/ensayo/unidad/_id
-    var conexion = mysql.createConnection(credenciales);
+router.get("/unidad/:_id",function(req, res){   // http://localhost:4000/usuarios/unidad/id
+     var conexion = mysql.createConnection(credenciales);
     conexion.query(
         `SELECT * FROM tbl_unidades WHERE ID_UNIDAD = ?`,
         [req.params._id],
@@ -34,7 +39,7 @@ router.get("/unidad/:_id",function(req, res){   // http://localhost:4000/ensayo/
 
 // ejemplo de ruta para insertar un elemento en la base de datos, en este caso la tabla master
 router.post("/enviar",function(req,res){  // http://localhost:4000/usuarios/enviar
-    var conexion = mysql.createConnection(credenciales);
+ var conexion = mysql.createConnection(credenciales);
      conexion.query(
         `INSERT INTO tbl_master(ID_EQUIPO, ID_COMPONENTE_FINAL, ID_EMPLEADO, SUBTIPO_VALOR_LISTA) 
         VALUES (?,?,?, ?)`
@@ -48,55 +53,45 @@ router.post("/enviar",function(req,res){  // http://localhost:4000/usuarios/envi
               res.end();
             }});
 });
+// verificacion de login****************************************************************************************************************************************************
+//app.post('/login/:correo', async function(req, res){
+     router.post('/login', async function(req, res){ // http://localhost:3000/login     (3)
+        var sql = ` SELECT * FROM tbl_empleados WHERE CORREO = req.body.correo AND req.body.CONTRASENA`;
+         conexion.query(sql, (err, result) => {
+            if (err) {
+                throw err;
+              //  return res.status(400).send('Credenciales invalidas');
+                //res.redirect('/');
+            }
+            else{
 
-// router.get('/update/:id', customerController.edit);
-// router.post('/update/:id', customerController.update);
-
-// controller.edit = (req, res) => {
-//     const { id } = req.params;
-//     req.getConnection((err, conn) => {
-//       conn.query("SELECT * FROM customer WHERE id = ?", [id], (err, rows) => {
-//         res.render('customers_edit', {
-//           data: rows[0]
-//         })
-//       });
-//     });
-//   };
-  
-//   controller.update = (req, res) => {
-//     const { id } = req.params;
-//     const newCustomer = req.body;
-//     req.getConnection((err, conn) => {
-  
-//     conn.query('UPDATE customer set ? where id = ?', [newCustomer, id], (err, rows) => {
-//       res.redirect('/');
-//     });
-//     });
-//   };
-
-
+                if(result){
+                    const validPassword = bcrypt.compare(req.body.CONTRASENA, sql.CONTRASENA);
+                    if(!validPassword)  return res.status(400).send('Credenciales invalidas');
+                    // req.session.correoUsuario = req.params.correo;    // se desea establecer algunas variables de sesion
+                    // req.session.codigoUsuario = user._id;
+                    // req.session.codigoTipoUsuario = user.tipoUsuario;
+                    res.status(200).redirect('/home'); // se redirecciona a una ruta de tipo get, que va a renderizar la vista cuando se loguee correctamente el usuario
+                }   }
+       });
+});
 // ejemplo de ruta para actualizar un elemento en la base de datos
-router.put("/actualizar/:id", (req, res)=>{ // http://localhost:4000/users/actualizar/id
-    const { id } = req.params;
-   var { ID_EQUIPO, 
-         ID_COMPONENTE_FINAL, 
-         ID_EMPLEADO,
-         SUBTIPO_VALOR_BOOLEANO, 
-        SUBTIPO_VALOR_LISTA,
-    SUBTIPO_VALOR_NUMERO,
-DATO_NUMERICO_OBTENIDO} = req.body;
+router.post("/actualizar/:id", (req, res)=>{ // http://localhost:4000/usuarios/actualizar/_id
 
-    var sql =  `UPDATE tbl_master
-    SET ID_EQUIPO = ?,
-    ID_COMPONENTE_FINAL = ?,
-    ID_EMPLEADO =?,
-    SUBTIPO_VALOR_BOOLEANO =?,
-    SUBTIPO_VALOR_LISTA =?,
-    SUBTIPO_VALOR_NUMERO = ?
-    
-    WHERE ID_DATO_INSERTADO = `
     var conexion = mysql.createConnection(credenciales);
+   let registroId = req.params.id;
+  let ID_EQUIPO = req.body.ID_EQUIPO;
+  let ID_COMPONENTE_FINAL = req.body.ID_COMPONENTE_FINAL;
+  let ID_EMPLEADO = req.body.ID_EMPLEADO; // ensayar esta ruta con: req.session.CORREO
+  let SUBTIPO_VALOR_BOOLEANO = req.body.SUBTIPO_VALOR_BOOLEANO;
+  let SUBTIPO_VALOR_LISTA= req.body.SUBTIPO_VALOR_LISTA;
+  let SUBTIPO_VALOR_NUMERO= req.body.SUBTIPO_VALOR_NUMERO;
+ 
 
+<<<<<<< HEAD
+let sql = `UPDATE tbl_master SET ID_EQUIPO =${ID_EQUIPO},ID_COMPONENTE_FINAL= ${ID_COMPONENTE_FINAL},ID_EMPLEADO = ${ID_EMPLEADO},SUBTIPO_VALOR_BOOLEANO= ${SUBTIPO_VALOR_BOOLEANO},SUBTIPO_VALOR_LISTA = ${SUBTIPO_VALOR_LISTA},SUBTIPO_VALOR_NUMERO =${SUBTIPO_VALOR_NUMERO}
+           WHERE ID_DATO_INSERTADO = ${registroId}`;
+=======
     conexion.query(sql, [ req.body.ID_EQUIPO, 
                            req.body.ID_COMPONENTE_FINAL,
                            req.body.ID_EMPLEADO,
@@ -105,8 +100,7 @@ DATO_NUMERICO_OBTENIDO} = req.body;
                            req.body.SUBTIPO_VALOR_NUMERO,
                            req.body.ID_DATO_INSERTADO
 
-
-                           req.body.id_ciudad ], function(error, data, fields){ 
+ ], function(error, data, fields){ 
         
         
         
@@ -119,18 +113,28 @@ DATO_NUMERICO_OBTENIDO} = req.body;
     res.end();
    }});
 })
+>>>>>>> 0ac3c84fec5861d57e902edd286dde30691726dc
+
+  conexion.query(sql, (err, result) => {
+    if (err) {
+        return res.status(500).send(err);
+    }
+    // res.redirect('/');
+console.log(result);
+});
+});
 
 // ejemplo de ruta para eliminar de la base de datos 
-router.delete("/:id",function(req, res){
-    var sql = "DELETE FROM tbl_ciudades WHERE ID_CIUDAD = ?";
-    var conexion = mysql.createConnection(credenciales);
-    conexion.query(sql, [req.params.id],  (error, data, fields)=>{
-        console.log(error);
-        res.send(data);
-        res.end();
-        conexion.end();
-    })
-});
+// router.delete("/:id",function(req, res){
+//     var sql = "DELETE FROM tbl_ciudades WHERE ID_CIUDAD = ?";
+//     // var conexion = mysql.createConnection(credenciales);
+//     conexion.query(sql, [req.params.id],  (error, data, fields)=>{
+//         console.log(error);
+//         res.send(data);
+//         res.end();
+//         conexion.end();
+//     })
+// });
 
 
 
@@ -202,6 +206,10 @@ router.get("/obtenersitios",function(req,res){   // http://localhost:4000/usuari
 });
 module.exports = router;
 
-
-
-
+             // res.render('index.ejs', {
+                //     title: Welcome to Socka | View Players
+                //     ,players: result
+                 // });
+                   //      req.session.correoUsuario = req.params.correo;    // se desea establecer algunas variables de sesion
+                 //      req.session.codigoUsuario = user._id;
+                 //      req.session.codigoTipoUsuario = user.tipoUsuario;

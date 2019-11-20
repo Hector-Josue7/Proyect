@@ -45,10 +45,31 @@ FROM tbl_formatos A
   LEFT JOIN tbl_equipos B
   ON A.ID_FORMATO = b.ID_FORMATO
 
+
 SELECT * FROM TBL_EQUIPOS   
   WHERE UBICACION_FISICA  LIKE "%DIFUSORES LAN 1%" 
 
+
+
+create view vista_unidades as
   SELECT A.NOMBRE_UNIDAD, B.NOMBRE_SISTEMA, C.NOMBRE_FORMATO, D.NOMBRE_EQUIPO
 FROM TBL_UNIDADES A INNER JOIN TBL_SISTEMAS B ON A.ID_UNIDAD = B.ID_UNIDAD
 INNER JOIN TBL_FORMATOS C ON B.ID_SISTEMA = C.ID_SISTEMA
 INNER JOIN TBL_EQUIPOS D ON C.ID_FORMATO = D.ID_FORMATO
+
+
+delimiter 
+ create procedure encuentra_caracteres(in nombre varchar(45))
+ begin
+ SELECT * FROM TBL_EQUIPOS   
+  WHERE UBICACION_FISICA  LIKE  "nombre";
+ end 
+ delimiter ;
+
+
+create procedure
+@titulo char(40)
+SELECT * FROM TBL_EQUIPOS WHERE UBICACION_FISICA like '%'+ @titulo +'%'
+
+CREATE TRIGGER before_master_insert
+BEFORE INSERT tbl_historial_accesos

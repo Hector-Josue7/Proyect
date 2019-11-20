@@ -1,9 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var mysql = require('mysql');
-var session = require('express-session');
 var path = require('path');
-const { database } = require('./keys');
 var mensajesRouter = require('./routes/usuarios-routers');
 const app = express();
 
@@ -12,21 +9,11 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
-//app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views'); 
+app.set('view engine', 'ejs');
 app.use("/usuarios",mensajesRouter);
-// Routes''''''''''''''''''''''''''''''''''
-//app.use(require('./routes/index'));
-//app.use(require('./routes/autenticacion-routers'));
-//app.use('/links', require('./routes/links'));
-//'''''''''''''''''''''''''''''''''''''''''''''''''''
-// require('./routes/usuarios-routers')(app);
-// app.set('views',__dirname + '/public');
-// app.set('view engine', 'ejs');
-// app.engine('html', require('ejs').renderFile);
 
-// app.get('/ejs', (req, res) => {
-//   res.render('index', {foo: 'FOO'});
-// });
+require('./routes/rutas-get')(app);
 // carpeta publica de archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -37,9 +24,7 @@ app.listen(app.get('port'), () => {
 });
 
 
-//app.use("/ensayo",ensayosRouter);
-//require('./modules/passport');
-//var ensayosRouter = require('./routes/ensayos-router');
+
 
 
 

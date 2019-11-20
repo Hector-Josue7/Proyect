@@ -66,7 +66,7 @@ INSERT INTO `tbl_sitios` (`ID_SITIO`,`ID_CIUDAD`, `NOMBRE_SITIO`, `TRILITERAL`) 
 (13, 28, 'MERIDA', 'MID'),
 (14, 29, 'VOLCÁN POAS', 'POA');
 
-INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`, `ID_PAIS`, `ID_SITIO`, `NOMBRE_LOCALIDAD`, `TRILITERAL`) VALUES
+INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`,`ID_PAIS`, `ID_SITIO`, `NOMBRE_LOCALIDAD`, `TRILITERAL`) VALUES
 (1, 504, 1, 'CERRO MONTE CRUDO', 'CMC'),
 (2, 504, 1, 'SEDE_CYN', 'C Y N'),
 (3, 504, 1, 'EL HORNO', 'EHR'),
@@ -112,14 +112,14 @@ INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`, `ID_PAIS`, `ID_SITIO`, `NOMBRE_LO
 (43, 506, 11, 'MATA DE CAÑA', 'MAT'),
 (44, 506, 11, 'LIBERIA', 'LIB');
 
-INSERT INTO `tbl_unidades` (`ID_UNIDAD`, `ID_PAIS`, `ID_SITIO`, `NOMBRE_UNIDAD`, `DESCRIPCION_UNIDAD`) VALUES
+INSERT INTO `tbl_unidades` (`ID_UNIDAD`,`ID_PAIS`, `ID_SITIO`, `NOMBRE_UNIDAD`, `DESCRIPCION_UNIDAD`) VALUES
 (1, 504, 1, 'AUTOMATIZACIÓN (HONDURAS)', 'Somos una unidad dedicada a automatizar procesos en cada uno de las rutinas que se hacen de forma diaria, semanal, mensual y trimestral estamos ubicados, nos repartimos en otras unidades tambien'),
 (2, 504, 1, 'ENERGÍA Y EQUIPOS AUXILIARES (HONDURAS)', 'somos una unidad dedicada a supervisar los equipos que se ubican en cada sitio, revisamos torres a las cuales se les da mantenimiento y se hacen reportes de como se encuentran'),
 (3, 504, 1, 'MACC (HONDURAS)', 'somos una unidad dedicada al mantenimiento de los equipos que le hacen llamadas a las aeronaves, se le privee mantenimiento a los equipos que se encuentran en las UCSS, a los equipos que estan desocupados, haciendolo de diferentes periodicidades'),
 (4, 504, 2, 'COMUNICACIÓN Y RADIO AYUDA (HONDURAS)', 'somops una unidad dedicada a supervisar otros centros, esto contribuye a mejorar el apoyo entre la comunidad de cocesna'),
 (5, 504, 2, 'VIGILANCIA Y RADAR (HONDURAS)', 'somos una unidad dedicada a proveer monitoreo a las aeronaves, conducimos de forma segura a los aviones trazandoles rutas para evitar que hayan colisiones, proveyendo seguridad a los pasajeros');
 
-INSERT INTO `tbl_areas` (`ID_AREA`, `ID_UNIDAD`, `ID_AREA_SUPERIOR`, `NOMBRE_AREA`) VALUES
+INSERT INTO `tbl_areas` (`ID_AREA`,`ID_UNIDAD`, `ID_AREA_SUPERIOR`, `NOMBRE_AREA`) VALUES
 (1, 1, NULL, 'ADMINISTRATIVA'),
 (2, 1, NULL, 'TECNICA'),
 (3, 1, NULL, 'OPERATIVA'),
@@ -134,7 +134,7 @@ INSERT INTO `tbl_areas` (`ID_AREA`, `ID_UNIDAD`, `ID_AREA_SUPERIOR`, `NOMBRE_ARE
 (12, 1, 8, 'RECEPCION'),
 (13, 1, NULL, 'DAC / SITIOS REMOTOS');
 
-INSERT INTO `tbl_mantenimientos` (`ID_MANTENIMIENTO`, `TITULO_MANTENIMIENTO`, `DESCRIPCION_MANTENIMIENTO`, `FECHA_CREACION`, `FECHA_LIMITE`) VALUES
+INSERT INTO `tbl_mantenimientos` (`ID_MANTENIMIENTO`,`TITULO_MANTENIMIENTO`, `DESCRIPCION_MANTENIMIENTO`, `FECHA_CREACION`, `FECHA_LIMITE`) VALUES
 (1, 'MANTENIMIENTO DE EQUIPOS AIRCON 2100', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed aliquid voluptatem nisi ab quasi eos fuga velit voluptatibus fugiat.', '2019-10-01 00:00:00', '2019-12-12 04:02:04'),
 (2, 'DESVIACION ANGULAR SDP, DBM', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque illo tempora cupiditate enim beatae amet nesciunt sunt tenetur. Possimus, dolorem?', '2019-03-04 03:16:06', '2018-11-04 04:02:10'),
 (3, 'IMPRESORAS DE UCSSs', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque illo tempora cupiditate enim beatae amet nesciunt sunt tenetur. Possimus, dolorem?', '2018-04-03 07:26:23', '2018-06-12 04:13:14'),
@@ -151,7 +151,9 @@ INSERT INTO `tbl_empleados` (`ID_EMPLEADO`,`ID_PAIS`,`ID_UNIDAD`, `ID_CARGO`,`ID
 (4,504, 5, 8,1, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123', 1),
 (5,504, 5, 8,1, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123', 1);
 
-INSERT INTO `tbl_sistemas` (`ID_SISTEMA`,`ID_UNIDAD`, `NOMBRE_SISTEMA`) VALUES
+INSERT INTO `tbl_sistemas` (`
+ID_SISTEMA`,`ID_UNIDAD
+`, `NOMBRE_SISTEMA`) VALUES
 (1, 2, 'PLANTA PBX TELEFÓNICA'),
 (2, 2, 'VSAT'),
 (3, 2, 'VOR/DME'),
@@ -196,7 +198,7 @@ INSERT INTO `tbl_formatos` (`ID_FORMATO`,`ID_SISTEMA`, `NOMBRE_FORMATO`) VALUES
 (20, 13, 'TRIMESTRAL 5-2'),
 (21, 13, 'TRIMESTRAL 8');
 
-INSERT INTO `tbl_subsistemas` (`ID_SUBSISTEMA`, `ID_SISTEMA`, `NOMBRE_SUBSISTEMA`) VALUES
+INSERT INTO `tbl_subsistemas` (`ID_SUBSISTEMA`,`ID_SISTEMA`, `NOMBRE_SUBSISTEMA`) VALUES
 (1, 13, 'SDD'),
 (2, 13, 'PDP'),
 (3, 13, 'SDP'),
@@ -211,7 +213,7 @@ INSERT INTO `tbl_subsistemas` (`ID_SUBSISTEMA`, `ID_SISTEMA`, `NOMBRE_SUBSISTEMA
 (12, 13, 'NTP'),
 (13, 13, 'AMH');
 
-INSERT INTO `tbl_equipos` (`ID_EQUIPO`, `ID_FORMATO`, `ID_SITIO`, `ID_SUBSISTEMA`, `ID_MANTENIMIENTO`, `NOMBRE_EQUIPO`, `UBICACION_FISICA`) VALUES
+INSERT INTO `tbl_equipos` (`ID_EQUIPO`,`ID_FORMATO`, `ID_SITIO`, `ID_SUBSISTEMA`, `ID_MANTENIMIENTO`, `NOMBRE_EQUIPO`, `UBICACION_FISICA`) VALUES
 (1, 1, 1, 1, 1, 'SDD1', 'UCS1'),
 (2, 1, 1, 1, 1, 'SDD2', 'UCS1'),
 (3, 1, 1, 1, 1, 'IMPR IFV-1', 'UCS1'),
@@ -412,9 +414,25 @@ INSERT INTO `tbl_equipos` (`ID_EQUIPO`, `ID_FORMATO`, `ID_SITIO`, `ID_SUBSISTEMA
 (198, 14, 1, 13, 8, 'AMH 1 => PORCENTAJE EN TABLA INICIAL', 'GERENCIA DE ESTACIÓN HONDURAS / MACC'),
 (199, 14, 1, 13, 8, 'AMH 1 => PORCENTAJE EN TABLA FINAL', 'GERENCIA DE ESTACIÓN HONDURAS / MACC'),
 (200, 14, 1, 13, 8, 'AMH 1 => OPTIMIZACION DE TABLAS', 'GERENCIA DE ESTACIÓN HONDURAS / MACC'),
-(201, 14, 1, 13, 8, 'AMH APP => PORCENTAJE EN TABLA INICIAL', 'GERENCIA DE ESTACIÓN HONDURAS / MACC');
+(201, 14, 1, 13, 8, 'AMH APP => PORCENTAJE EN TABLA INICIAL', 'GERENCIA DE ESTACIÓN HONDURAS / MACC'),
+(202, 15, 1, 6, 2, 'AGUA', 'SALA DBM CENTRO DE CONTROL MACC'),
+(203, 15, 1, 6, 2, 'BELICE', 'SALA DBM CENTRO DE CONTROL MACC'),
+(204, 15, 1, 6, 2, 'BLUE FIELD', 'SALA DBM CENTRO DE CONTROL MACC'),
+(205, 15, 1, 6, 2, 'PUERTO CABEZA', 'SALA DBM CENTRO DE CONTROL MACC'),
+(206, 15, 1, 6, 2, 'CANCUN', 'SALA DBM CENTRO DE CONTROL MACC'),
+(207, 15, 1, 6, 2, 'GRAND CAYMAND', 'SALA DBM CENTRO DE CONTROL MACC'),
+(208, 15, 1, 6, 2, 'DIXON HILL', 'SALA DBM CENTRO DE CONTROL MACC'),
+(209, 15, 1, 6, 2, 'MANAGUA', 'SALA DBM CENTRO DE CONTROL MACC'),
+(210, 15, 1, 6, 2, 'MATA DE CAÑA', 'SALA DBM CENTRO DE CONTROL MACC'),
+(211, 15, 1, 6, 2, 'MONTE CRUDO', 'SALA DBM CENTRO DE CONTROL MACC'),
+(212, 15, 1, 6, 2, 'NIKTUN', 'SALA DBM CENTRO DE CONTROL MACC'),
+(213, 15, 1, 6, 2, 'SANTIAGO', 'SALA DBM CENTRO DE CONTROL MACC'),
+(214, 15, 1, 6, 2, 'SAN PEDRO', 'SALA DBM CENTRO DE CONTROL MACC'),
+(215, 15, 1, 6, 2, 'VOLCAN POAS', 'SALA DBM CENTRO DE CONTROL MACC'),
+(216, 15, 1, 6, 2, 'DAVID', 'SALA DBM CENTRO DE CONTROL MACC'),
+(217, 15, 1, 6, 2, 'JULIAN', 'SALA DBM CENTRO DE CONTROL MACC');
 
-INSERT INTO `tbl_componente_final` (`ID_COMPONENTE`, `ID_EQUIPO`, `DESCRIPCION`) VALUES
+INSERT INTO `tbl_componente_final` (`ID_COMPONENTE`,`ID_EQUIPO`, `DESCRIPCION`) VALUES
 (1, 1, 'ESTADO'),
 (2, 1, 'LAN 1'),
 (3, 1, 'LAN 2'),
@@ -1150,7 +1168,7 @@ INSERT INTO `tbl_enteros_flotantes` (`SUBTIPO_VALOR_NUMERO`,`VALOR_MINIMO`, `VAL
 (7, 400, 450),
 (8, 450, 500);
 
-INSERT INTO `tbl_master` (`ID_DATO_INSERTADO`, `ID_EQUIPO`, `ID_COMPONENTE_FINAL`, `ID_EMPLEADO`, `FECHA_AUTOMATICA`, `SUBTIPO_VALOR_BOOLEANO`, `SUBTIPO_VALOR_LISTA`, `SUBTIPO_VALOR_NUMERO`, `DATO_NUMERICO_OBTENIDO`) VALUES
+INSERT INTO `tbl_master` (`ID_DATO_INSERTADO`,`ID_EQUIPO`, `ID_COMPONENTE_FINAL`, `ID_EMPLEADO`, `FECHA_AUTOMATICA`, `SUBTIPO_VALOR_BOOLEANO`, `SUBTIPO_VALOR_LISTA`, `SUBTIPO_VALOR_NUMERO`, `DATO_NUMERICO_OBTENIDO`) VALUES
 (1, 1, 1, 1, '2019-11-14 16:43:44', NULL, '1 - 1', NULL, NULL),
 (2, 1, 2, 1, '2019-11-14 16:43:44', NULL, '1 - 8', NULL, NULL),
 (3, 1, 3, 1, '2019-11-14 16:44:24', NULL, '1 - 9', NULL, NULL),
