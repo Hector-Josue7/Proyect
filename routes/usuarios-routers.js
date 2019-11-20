@@ -105,8 +105,7 @@ DATO_NUMERICO_OBTENIDO} = req.body;
                            req.body.SUBTIPO_VALOR_NUMERO,
                            req.body.ID_DATO_INSERTADO
 
-
-                           req.body.id_ciudad ], function(error, data, fields){ 
+ ], function(error, data, fields){ 
         
         
         
