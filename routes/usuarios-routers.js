@@ -88,10 +88,10 @@ router.post("/actualizar/:id", (req, res)=>{ // http://localhost:4000/usuarios/a
   let SUBTIPO_VALOR_NUMERO= req.body.SUBTIPO_VALOR_NUMERO;
  
 
-<<<<<<< HEAD
+
 let sql = `UPDATE tbl_master SET ID_EQUIPO =${ID_EQUIPO},ID_COMPONENTE_FINAL= ${ID_COMPONENTE_FINAL},ID_EMPLEADO = ${ID_EMPLEADO},SUBTIPO_VALOR_BOOLEANO= ${SUBTIPO_VALOR_BOOLEANO},SUBTIPO_VALOR_LISTA = ${SUBTIPO_VALOR_LISTA},SUBTIPO_VALOR_NUMERO =${SUBTIPO_VALOR_NUMERO}
            WHERE ID_DATO_INSERTADO = ${registroId}`;
-=======
+
     conexion.query(sql, [ req.body.ID_EQUIPO, 
                            req.body.ID_COMPONENTE_FINAL,
                            req.body.ID_EMPLEADO,
@@ -113,16 +113,9 @@ let sql = `UPDATE tbl_master SET ID_EQUIPO =${ID_EQUIPO},ID_COMPONENTE_FINAL= ${
     res.end();
    }});
 })
->>>>>>> 0ac3c84fec5861d57e902edd286dde30691726dc
 
-  conexion.query(sql, (err, result) => {
-    if (err) {
-        return res.status(500).send(err);
-    }
-    // res.redirect('/');
-console.log(result);
-});
-});
+
+
 
 // ejemplo de ruta para eliminar de la base de datos 
 // router.delete("/:id",function(req, res){
