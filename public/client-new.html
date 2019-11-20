@@ -30,6 +30,34 @@
 	<link rel="stylesheet" href="./css/style.css">
 
 
+
+
+	
+	<style>
+			.table-dark {
+				color: #fff;
+				background-color: #212529;
+			}
+	
+			.seleccion {
+				border: 3px solid rgb(61, 93, 124);
+				background-color: rgb(172, 194, 202);
+				color: rgb(22, 21, 21);
+				font-size: 17px;
+				width: 150px;
+				height: 35px;
+			}
+	
+			@import url("https://fonts.googleapis.com/css?family=Lato");
+	
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				font-family: Lato, sans-serif;
+				background-color: #E1E2E1;
+			}
+		</style>
 </head>
 <body>
 	
@@ -168,37 +196,19 @@
 					<fieldset>
 						<legend><i class="fas fa-user"></i> &nbsp; Información básica</legend>
 						<div class="container-fluid">
+								
 							<div class="row">
-								<div class="col-12 col-md-6">
-									<div class="form-group">
-										<label for="cliente_dni" class="bmd-label-floating">DNI</label>
-										<input type="text" pattern="[a-zA-Z0-9-]{1,27}" class="form-control" id="cliente_dni" id="cliente_dni" maxlength="27">
-									</div>
-								</div>
-								<div class="col-12 col-md-6">
-									<div class="form-group">
-										<label for="cliente_nombre" class="bmd-label-floating">Nombre</label>
-										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_nombre" id="cliente_nombre" maxlength="40">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_apellido" class="bmd-label-floating">Apellido</label>
-										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_apellido" id="cliente_apellido" maxlength="40">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_telefono" class="bmd-label-floating">Teléfono</label>
-										<input type="text" pattern="[0-9()+]{1,20}" class="form-control" name="cliente_telefono" id="cliente_telefono" maxlength="20">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_direccion" class="bmd-label-floating">Dirección</label>
-										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ#- ]{1,150}" class="form-control" name="cliente_direccion" id="cliente_direccion" maxlength="150">
-									</div>
-								</div>
+									<label style="padding-left: auto;">Seleccione un equipo</label>
+							 <!-- Subject -->
+							 <select id="slc-Equipos" style="width:100px"  class="browser-default custom-select mb-4"></select>
+						
+			<!-- <div style="display:none"> -->
+					<label style="padding-left: auto;">Componente final</label>
+					<select  id="slc-Componente" style="width:100px"  class="browser-default custom-select mb-4"></select>
+			<!-- </div> -->
+							 
+								
+					
 							</div>
 						</div>
 					</fieldset>
@@ -209,6 +219,63 @@
 						<button type="submit" class="btn btn-raised btn-info btn-sm"><i class="far fa-save"></i> &nbsp; GUARDAR</button>
 					</p>
 				</form>
+
+
+
+
+
+				<div class="jumbotron" style="margin: 40px 220px 0px 30px; padding: 20px 15px; background: #076585;  
+				background: -webkit-linear-gradient(to bottom, #fff, #076585);  
+				background: linear-gradient(to bottom, #fff, #076585); " >
+					  <h2 class="display-4" >	  Mantenimiento de equipos AIRCON 2100</h2>
+			  
+					  <hr class="my-4">
+					  <div class="card card-body">
+		
+							  <div class="x_content table-responsive" >
+		  
+									  <table class="table table-bordered " style="width:700px" id="tablaEncabezado" >
+										  <thead>
+											<tr>
+											  <th scope="col" colspan="2" style="text-align: center">RUTINA DE MANTENIMIENTO</th>
+										  
+										  
+											  <th scope="col">Gerencia de estación</th>
+											  <th scope="col">SITIO</th>
+											  <th scope="col">SISTEMA/EQUIPO</th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+													<th>Código</th>
+													<td>MTTO-GT-MTO-303</td>
+									  
+												   
+													<td rowspan="3">HONDURAS</td>
+													<td rowspan="3">SALA DE EQUIPOS</td>
+													<td  rowspan="3">AIRCON 2100</td>
+									   
+										   
+											</tr>
+						
+											<tr>
+											 
+								  
+											  <th>Edición</th>
+									   
+											  <td>004</td>
+											  
+										   
+											</tr>
+										
+										  </tbody>
+										</table>
+						
+								  </div>
+		  
+					  </div>
+			  
+					</div>
 			</div>	
 
 		</section>
@@ -235,5 +302,6 @@
 	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
 	<script src="./js/main.js" ></script>
+	<script src="./js/ctrl-client-new.js"></script>
 </body>
 </html>

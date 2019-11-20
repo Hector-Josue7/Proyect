@@ -144,16 +144,14 @@ INSERT INTO `tbl_mantenimientos` (`ID_MANTENIMIENTO`,`TITULO_MANTENIMIENTO`, `DE
 (7, 'SISTEMA WSACC', '   molestiae, qui voluptates cupiditate tempora harum illum magnam distinctio cum omnis molestias impedit corrupti ', '2016-12-14 06:00:00', '2017-04-14 10:00:00'),
 (8, 'RUTINA DE MANTENIMIENTO DEL SISTEMA AMH', 'nulla error sint corporis impedit nam quasi necessitatibus. Ducimus aspernatur quis repudiandae facilis incidunt', '2018-10-09 06:00:00', '2018-11-12 17:00:00');
 
-INSERT INTO `tbl_empleados` (`ID_EMPLEADO`,`ID_PAIS`,`ID_UNIDAD`, `ID_CARGO`,`ID_MANTENIMIENTO`,`NOMBRE`, `CORREO`, `USUARIO`, `CONTRASENA`, `ACCESO`) VALUES
-(1,504, 1, 8,1, 'Louie Liam Leannon Moen', 'louieliam@gmail.com', 'luilieliam1', 'asd.123', 1),
-(2,504, 1, 8,1, 'Darrin Hank Becker Welch', 'darrinhank@hotmail.com', 'darrinhank2', 'asd.123', 1),
-(3,504, 5, 8,1, 'Brett Jaeden Rempel Hermiston', 'brettjaedenr@gmail.com', 'brettjaeden3', 'asd.123', 1),
-(4,504, 5, 8,1, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123', 1),
-(5,504, 5, 8,1, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123', 1);
+INSERT INTO `tbl_empleados` (`ID_EMPLEADO`,`ID_PAIS`,`ID_UNIDAD`, `ID_CARGO`,`ID_MANTENIMIENTO`,`NOMBRE`, `CORREO`, `USUARIO`, `CONTRASENA`) VALUES
+(1,504, 1, 8,1, 'Louie Liam Leannon Moen', 'louieliam@gmail.com', 'luilieliam1', 'asd.123'),
+(2,504, 1, 8,1, 'Darrin Hank Becker Welch', 'darrinhank@hotmail.com', 'darrinhank2', 'asd.123'),
+(3,504, 5, 8,1, 'Brett Jaeden Rempel Hermiston', 'brettjaedenr@gmail.com', 'brettjaeden3', 'asd.123'),
+(4,504, 5, 8,1, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123'),
+(5,504, 5, 8,1, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123');
 
-INSERT INTO `tbl_sistemas` (`
-ID_SISTEMA`,`ID_UNIDAD
-`, `NOMBRE_SISTEMA`) VALUES
+INSERT INTO `tbl_sistemas` (`ID_SISTEMA`,`ID_UNIDAD`, `NOMBRE_SISTEMA`) VALUES
 (1, 2, 'PLANTA PBX TELEFÓNICA'),
 (2, 2, 'VSAT'),
 (3, 2, 'VOR/DME'),
