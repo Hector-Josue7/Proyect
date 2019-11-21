@@ -1,0 +1,69 @@
+las vistas son tablas virtuales que contienen resultados de una consulta
+
+CREATE VIEW vista_producto_categoria AS
+SELECT p.id, p.nombre, p.precio, p.existencia, c.nombre AS vista_producto_categoria
+FROM productos AS precio
+INNER JOIN categoria AS c ON p.idCategoria = c.id;
+
+
+CREATE VIEW vista_producto_escaso AS 
+SELECT * FROM productos WHERE existencias <10;
+
+
+
+
+SELECT * FROM vista_producto_categoria;
+SELECT * FROM vista_producto_escaso;
+
+ALTER VIEW vista_producto_categoria AS
+SELECT p.idProducto, p.nombre, p.fecha_alta, c.nombre AS categoria
+FROM productos AS p
+INNER JOIN categoria AS c ON p.idCategoria = c.id;
+
+SELECT * FROM vista_producto_categoria;
+
+SHOW CREATE VIEW vista_producto_categoria;
+DROP VIEW vista_producto_categoria;
+
+
+
+
+
+
+DELIMITER // 
+
+CREATE PROCEDURE productoXcategoria (IN id INT)
+BEGIN
+SELECT * FROM productos WHERE idCategoria = id;
+END //
+
+
+DELIMITER;
+
+CALL productoXcategoria(3)
+
+SHOW CREATE PROCEDURE productoXcategoria;
+DROP PROCEDURE productoXcategoria
+
+
+
+
+
+DELIMITER |
+
+CREATE TRIGGER tempTrigger BEFORE INSERT ON categoria
+FOR EACH ROW BEGIN 
+INSERT INTO temp(nombre) VALUE(NEW.nombre)
+END |
+
+
+INSERT INTO categoria (nombre) VALUE ('trigger');
+
+SHOW CREATE TRIGGER tempTrigger; 
+
+SHOW TRIGGERS;
+DROP TRIGGER;
+
+
+
+

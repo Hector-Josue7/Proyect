@@ -185,15 +185,35 @@
 					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE
 				</h3>
 				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem odit amet asperiores quis minus, dolorem repellendus optio doloremque error a omnis soluta quae magnam dignissimos, ipsam, temporibus sequi, commodi accusantium!
+					Esta seccion es para agregar un nuevo equipo
 				</p>
 			</div>
 
-			<div class="container-fluid">
+			<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+				
+					<!--Aqui deben estar tooodos los usuarios-->
+					<select id="slc-Componente" class="form-control" style="width: 200px;">
+					  <!-- <option value="1">Patricio</option>
+					  <option value="2">Goku</option>
+					  <option value="3">Vegeta</option>
+					  <option value="4">Trunks</option>
+					  <option value="5">Goten</option> -->
+					</select>
+					&nbsp;
+					<button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#nuevo-post">
+						Nuevo post
+					</button>
+					
+				  </div>
+
+			<!-- <div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a class="active" href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
-					</li>
+							<form class="form-inline my-2 my-lg-0">
+									<button class="btn btn-danger my-2 my-sm-0" type="button" data-toggle="modal"  data-target="#modalAgregarPelicula">Agregar</button>
+								  </form> -->
+						<!-- <a class="active" href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a> -->
+					<!-- </li>
 					<li>
 						<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
 					</li>
@@ -201,28 +221,28 @@
 						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
 					</li>
 				</ul>	
-			</div>
+			</div> -->
 			
 			<!-- Content here-->
-			<div class="container-fluid">
+			<!-- <div class="container-fluid">
 				<form action="" class="form-neon" autocomplete="off">
 					<fieldset>
 						<legend><i class="fas fa-user"></i> &nbsp; Información básica</legend>
 						<div class="container-fluid">
 								
 							<div class="row">
-									<label style="padding-left: auto;">Seleccione un equipo</label>
+									<label style="padding-left: auto;">Seleccione un equipo</label> -->
 							 <!-- Subject -->
-							 <select id="slc-Equipos" style="width:100px"  class="browser-default custom-select mb-4"></select>
+							 <!-- <select id="slc-Equipos" style="width:100px"  class="browser-default custom-select mb-4"></select> -->
 						
 			<!-- <div style="display:none"> -->
-					<label style="padding-left: auto;">Componente final</label>
-					<select  id="slc-Componente" style="width:100px"  class="browser-default custom-select mb-4"></select>
+					<!-- <label style="padding-left: auto;">Componente final</label>
+					<select  id="slc-Componente" style="width:100px"  class="browser-default custom-select mb-4"></select> -->
 			<!-- </div> -->
 							 
 								
 					
-							</div>
+							<!-- </div>
 						</div>
 					</fieldset>
 					<br><br><br>
@@ -237,63 +257,47 @@
 
 
 
-				<div class="jumbotron" style="margin: 40px 220px 0px 30px; padding: 20px 15px; background: #076585;  
-				background: -webkit-linear-gradient(to bottom, #fff, #076585);  
-				background: linear-gradient(to bottom, #fff, #076585); " >
-					  <h2 class="display-4" >	  Mantenimiento de equipos AIRCON 2100</h2>
-			  
-					  <hr class="my-4">
-					  <div class="card card-body">
 		
-							  <div class="x_content table-responsive" >
-		  
-									  <table class="table table-bordered " style="width:700px" id="tablaEncabezado" >
-										  <thead>
-											<tr>
-											  <th scope="col" colspan="2" style="text-align: center">RUTINA DE MANTENIMIENTO</th>
-										  
-										  
-											  <th scope="col">Gerencia de estación</th>
-											  <th scope="col">SITIO</th>
-											  <th scope="col">SISTEMA/EQUIPO</th>
-											</tr>
-										  </thead>
-										  <tbody>
-											<tr>
-													<th>Código</th>
-													<td>MTTO-GT-MTO-303</td>
-									  
-												   
-													<td rowspan="3">HONDURAS</td>
-													<td rowspan="3">SALA DE EQUIPOS</td>
-													<td  rowspan="3">AIRCON 2100</td>
-									   
-										   
-											</tr>
-						
-											<tr>
-											 
-								  
-											  <th>Edición</th>
-									   
-											  <td>004</td>
-											  
-										   
-											</tr>
-										
-										  </tbody>
-										</table>
-						
-								  </div>
-		  
-					  </div>
-			  
-					</div>
-			</div>	
+			</div>	 -->
 
 		</section>
 	</main>
-	
+	   <!-- Modal Agregar pelicula-->
+	   <div class="modal fade" id="modalAgregarPelicula" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="modalAgregarPeliculaLabel">Detalles</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  <form id="formulario">
+					Nombre: <input type="text" class="form-control" name="nombre" id="nombre">
+					Descripción: <input type="text" class="form-control" name="descripcion" id="descripcion">
+					Categoría: <select name="categoria" id="categoria" class="form-control"></select>
+					Calificación: <input type="number" class="form-control" name="calificacion" id="calificacion">
+					Original: <label><input type="radio" value="true" name="original">Sí </label>
+					  <label><input type="radio" value="false" name="original">No </label>
+					Carátula: <input type="text" class="form-control" name="caratula" id="caratula">
+					Imágenes: <select multiple name="imagenes" id="imagenes" class="form-control">
+								  <option value="img/slide1.jpg">img/slide1.jpg</option>
+								  <option value="img/slide2.jpg">img/slide2.jpg</option>
+								  <option value="img/slide3.jpg">img/slide3.jpg</option>
+								  <option value="img/slide4.jpg">img/slide4.jpg</option>
+								  <option value="img/slide5.jpg">img/slide5.jpg</option>
+								  <option value="img/slide6.jpg">img/slide6.jpg</option>
+							  </select>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-danger" id="btn-guardar-pelicula">Guardar</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
 	
 	<!--=============================================
 	=            Include JavaScript files           =

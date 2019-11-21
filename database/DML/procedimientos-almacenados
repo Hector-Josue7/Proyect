@@ -1,0 +1,88 @@
+USE ciens;
+DELIMITER //
+CREATE PROCEDURE Add_User(
+
+   IN  _Name VARCHAR(15),
+   IN _lName VARCHAR(15),
+   IN _Age INT,
+   IN _Gender VARCHAR(15),
+   
+)
+BEGIN 
+
+INSERT INTO users(Name, LName, Age, Gender, Timerr) VALUES (_Name, _LName, _Age, _Gender, NOW());
+END
+//
+
+CALL Add_User('Carlos', 'Solorzano', 22, 'Masculino');
+
+//**********************************************************************************************************************************
+
+
+create database tutorial;
+use tutorial;
+
+create table users(
+    id int auto_increment primary key,
+    username varchar(50) not null,
+    email varchar(100) not null,
+    pass varchar(100) not null,
+    nombre varchar(100) not null
+)
+
+describe users
+
+
+
+DELIMITER //
+CREATE PROCEDURE insert_user(
+IN _username VARCHAR(50),
+_email VARCHAR(100),
+_pass VARCHAR(100),
+_nombre VARCHAR(100)
+ 
+)  
+BEGIN
+INSERT INTO users(username, email, pass, nombre) VALUES (_username, _email, _pass, _nombre);
+END
+// DELIMITER;
+
+
+call insert_user("camilo24", "camilo24@gmail.com", "asd.1234", "Camilo Perez");
+
+
+
+///>>>>>>crear una carpeta tutorialprocedimientos en htdocs, adentro crear un archivo connection.php
+
+<?php
+class connection {
+  private $conn;
+  public function __construct(){
+      $this->conn = new mysqli("localhost", "root", "", "tutorial");
+  }
+  public function get_connection(){
+      return $this->conn;
+  }
+}
+?>
+
+///>>>>>> crear otro archivo en la carpeta tutorialprocedimientos con el nombre de procedimientos.php
+
+<?php
+
+require_once('connection.php');
+$mysql = new connection();
+$conexion = $mysql-> get_connection();  // aqui se conecta a la base de datos
+$datos = array("username" => "pedrou33", "email" => "pedrou33@hotmail.com", sha1("pedro12") ,"nombre"=>"Pedro Martinez")
+$statement = $conexion->prepare("CALL insert_user(?,?,?,?)");  // esto es para evitar el sql inyection
+$statement ->bind_param("ssss", $datos["username"], $datos["email"], datos["pass"], $datos["nombre"] ); // el primer argumento es el formato de los datos, como son cadenas de caracteres son ssss
+$statement-> execute();
+$statement-> close();
+$conexion->close();
+
+?>
+
+ingresar a http://localhost/tutorialprocedimientos/procedimientos.php
+
+select * from users
+

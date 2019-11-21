@@ -33,7 +33,11 @@ function retornaUnaUnidad (req, res){
 function insertaMaster (req, res){
     var conexion = mysql.createConnection(credenciales);
     conexion.query(
-       `INSERT INTO tbl_master(ID_EQUIPO, ID_COMPONENTE_FINAL, ID_EMPLEADO, SUBTIPO_VALOR_LISTA) VALUES (?,?,?, ?)`,  [req.body.ID_EQUIPO, req.body.ID_COMPONENTE_FINAL,req.body.ID_EMPLEADO,req.body.SUBTIPO_VALOR_LISTA],
+       `INSERT INTO tbl_master(ID_EQUIPO, 
+                               ID_COMPONENTE_FINAL, 
+                               ID_EMPLEADO, 
+                               SUBTIPO_VALOR_LISTA) 
+        VALUES (?,?,?, ?)`,  [req.body.ID_EQUIPO, req.body.ID_COMPONENTE_FINAL,req.body.ID_EMPLEADO,req.body.SUBTIPO_VALOR_LISTA],
        function(error, data, fields){
            if (error){
         res.status(500).send({message: `Error al salvar en la base de datos: ${error}`})
@@ -143,7 +147,7 @@ function obtenerSitios (req, res){
     var conexion = mysql.createConnection(credenciales);
    
     conexion.query(
-        "SELECT ID_SITIO ,NOMBRE_SITIO FROM `tbl_sitios`",
+        `SELECT ID_SITIO ,NOMBRE_SITIO FROM tbl_sitios `,
         [],
         function(error, data, fields){
             console.log(error);
@@ -153,7 +157,27 @@ function obtenerSitios (req, res){
         }
     );
 }
-module.exports ={
+
+
+function borraMaster(req, res) {
+    var conexion = mysql.createConnection(credenciales);
+    var sSQLDelete = `DELETE FROM tbl_master WHERE ID_DATO_INSERTADO = ${req.params.id}` ;
+   conexion.query(sSQLDelete, function(oErrDelete, oRowsDelete, oColsDelete) {
+      if(oErrDelete) {
+        res.write(JSON.stringify({
+          error: true,
+          error_object: oErrDelete
+        }));
+        res.end();
+      } else {
+        res.write(JSON.stringify({
+          error: false
+        }));
+        res.end();      
+      }    
+    });  
+}
+module.exports = {
     retornaFormatos,
     retornaUnaUnidad,
     insertaMaster,
@@ -162,6 +186,7 @@ module.exports ={
     obtenerUnidades,
     obtenerEquipos,
     obtenerComponentes,
-    obtenerSitios
+    obtenerSitios,
+    borraMaster
 
 }
