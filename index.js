@@ -7,10 +7,14 @@ const morgan = require('morgan');
 const routes = require('./routes/index.routes');
 var passport = require('passport');
 var flash    = require('connect-flash');
+const MySQLStore = require('express-mysql-session')(session);
+const { database } = require('./keys');
 const app = express();
 // configuraciones
 
-require('./config/passport')(passport); // pass passport for configuration
+
+// require('./lib/passport');
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
@@ -22,8 +26,8 @@ app.set('port', process.env.PORT || 4000);
 app.set('views', __dirname + '/views'); 
 app.set('view engine', 'ejs');
 // Routes
-app.use('/api', routes);
-require('./routes/auth.routes')(app, passport); 
+app.use('/api_mantenimiento', routes);   //   DESDE ESTA RUTA COMIENZAN LAS RUTAS, SE LES ENLAZA EL PREJIFO api_mantenimiento
+
 
 
 //Servicio de archivos estáticos
@@ -49,51 +53,14 @@ module.exports = app;
 
 
 
-// var express  = require('express');
-// var session  = require('express-session');
-//
-// var bodyParser = require('body-parser');
-// var morgan = require('morgan');
-// var app      = express();
-// var port     = process.env.PORT || 8080;
-
-// var passport = require('passport');
-// var flash    = require('connect-flash');
-
-// // configuration ===============================================================
-// // connect to our database
-
-// require('./config/passport')(passport); // pass passport for configuration
 
 
 
-// // set up our express application
-// app.use(morgan('dev')); // log every request to the console
-// app.use(cookieParser()); // read cookies (needed for auth)
-// app.use(bodyParser.urlencoded({
-// 	extended: true
-// }));
-// app.use(bodyParser.json());
-
-// app.set('view engine', 'ejs'); // set up ejs for templating
-
-// // required for passport
-// app.use(session({
-// 	secret: 'vidyapathaisalwaysrunning',
-// 	resave: true,
-// 	saveUninitialized: true
-//  } )); // session secret
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions
-// app.use(flash()); // use connect-flash for flash messages stored in session
 
 
-// // routes ======================================================================
-// require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-// // launch ======================================================================
-// app.listen(port);
-// console.log('The magic happens on port ' + port);
 
-// //Servicio de archivos estáticos
-// app.use(express.static('public'));
+
+
+
+

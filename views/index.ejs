@@ -1,34 +1,76 @@
-<!-- views/index.ejs -->
-<!doctype html>
-<html>
-    <head>
-    	<title>Valent | Autenticación</title>
-        <!-- <link rel="icon" href="/img/icono.png" type="image/x-icon"/> -->
-        <link rel="icon" href="https://valentramos.com/wp-content/uploads/2017/08/icono.png" sizes="32x32">
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- load bootstrap css -->
-    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-        <!-- <link href="/css/style.css" rel="stylesheet" type="text/css"> -->
-        <link rel="stylesheet" href="/css/style-login.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row home text-center">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="../public/css/normalize.css"> 
 
-                <div class="col-md-12 center">
-                    <img src="/img/logoi.png" style="width:400px">
-                    <h2><span class="fa fa-lock"></span> Sistema de rutinas de mantenimiento</h2>
-                </div>
+	<!-- Bootstrap V4.3 -->
+	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
 
-                <div class="col-md-12 center" style="margin-top: 80px">
-                    <p>- Inicia Sesión ó Regístrate -</p>
-                    <a href="/login" class="btn btn-primary"><span class="fa fa-sign-in"></span> Iniciar Sesión</a>
-                </div>
-                
-                <div class="col-md-12 center">
-                    <a href="/signup" class="btn btn-secondary"><span class="fa fa-user"></span> Registrarse</a>
-                </div>
-                    
-            </div>
-        </div>
-    </body>
+	<!-- Bootstrap Material Design V4.0 -->
+	<link rel="stylesheet" href="../public/css/bootstrap-material-design.min.css">
+
+	<!-- Font Awesome V5.9.0 -->
+	<link rel="stylesheet" href="../public/css/all.css">
+
+	<!-- Sweet Alerts V8.13.0 CSS file -->
+	<link rel="stylesheet" href="../public/css/sweetalert2.min.css">
+
+	<!-- Sweet Alert V8.13.0 JS file-->
+	<script src="../public/js/sweetalert2.min.js" ></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<link rel="stylesheet" href="../public/css/jquery.mCustomScrollbar.css">
+	
+	<!-- General Styles -->
+	<link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+	<div class="login-container">
+		<div class="login-content">
+			<p class="text-center">
+				<i class="fas fa-user-circle fa-5x"></i>
+			</p>
+			<p class="text-center">
+				Inicia sesión con tu cuenta
+			</p>
+			<form action="">
+				<div class="form-group">
+					<label for="UserName" class="bmd-label-floating"><i class="fas fa-user-secret"></i> &nbsp; Usuario</label>
+					<input type="text" class="form-control" id="UserName" name="usuario" pattern="[a-zA-Z0-9]{1,35}" maxlength="35">
+				</div>
+				<div class="form-group">
+					<label for="UserPassword" class="bmd-label-floating"><i class="fas fa-key"></i> &nbsp; Contraseña</label>
+					<input type="password" class="form-control" id="UserPassword" name="clave" maxlength="200">
+				</div>
+				<a href="home.html" class="btn-login text-center">LOG IN</a>
+			</form>
+		</div>
+	</div>
+
+	
+	<!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+	<!-- jQuery V3.4.1 -->
+	<script src="./js/jquery-3.4.1.min.js" ></script>
+
+	<!-- popper -->
+	<script src="./js/popper.min.js" ></script>
+
+	<!-- Bootstrap V4.3 -->
+	<script src="./js/bootstrap.min.js" ></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js" ></script>
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<script src="./js/bootstrap-material-design.min.js" ></script>
+	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+	<script src="./js/main.js" ></script>
+</body>
 </html>

@@ -18,10 +18,6 @@ router.post("/paises", ensayoCtrl.insertarPais ); // http://localhost:4000/ensay
 
 
 
-// Sun Sep 30 2018 08:17:00 GMT-0600 (hora estándar central)
-// Sat Jan 12 2019 23:26:45 GMT-0600 (hora estándar central)
-// 30/09/2018
-// 01/12/2019
 
 module.exports = router;
 
