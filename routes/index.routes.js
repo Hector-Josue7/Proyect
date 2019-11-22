@@ -6,7 +6,7 @@ const router = require('express').Router();
 // Rutas para probar cosas
 router.use('/test', require('./test.routes'));
 
-// Rutas para renderizar vistas
+// Rutas para renderizar vistas 
 router.use('/gets', require('./rutas-get')); 
 
 // Rutas de los posts y algunas de comentarios

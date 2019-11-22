@@ -6,7 +6,7 @@ var credenciales = {
     user:"root",
     password:"",
     port:"3306",
-    database: "bd_rutinasV3"
+    database: "bd_rutinas"
   };
 // insertar un pais
 function insertarPais(req, res){

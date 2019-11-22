@@ -32,22 +32,24 @@ function retornaUnaUnidad (req, res){
 
 function insertaMaster (req, res){
     var conexion = mysql.createConnection(credenciales);
-    conexion.query(
-       `INSERT INTO tbl_master(ID_EQUIPO, 
-                               ID_COMPONENTE_FINAL, 
-                               ID_EMPLEADO, 
-                               SUBTIPO_VALOR_LISTA) 
-        VALUES (?,?,?, ?)`,  [req.body.ID_EQUIPO, req.body.ID_COMPONENTE_FINAL,req.body.ID_EMPLEADO,req.body.SUBTIPO_VALOR_LISTA],
+    conexion.query(`INSERT INTO tbl_master(ID_EQUIPO,ID_COMPONENTE_FINAL,ID_EMPLEADO,SUBTIPO_VALOR_LISTA) VALUES (?,?,?,?)`,[
+         req.body.ID_EQUIPO, 
+         req.body.ID_COMPONENTE_FINAL,
+         req.body.ID_EMPLEADO,
+         req.body.SUBTIPO_VALOR_LISTA
+        ],
        function(error, data, fields){
            if (error){
-        res.status(500).send({message: `Error al salvar en la base de datos: ${error}`})
+        // res.status(500).send({message: `Error al salvar en la base de datos: ${error}`})
+        res.send(error);
                res.end();
            }else{
-             res.status(200).send({dato: data}) 
+            //  res.status(200).send({dato: data}) 
+            res.send(data);
              res.end();
-           }});
+           }
+        });
 }
-
 function verificaLogin (req, res){
     var sql = ` SELECT * FROM tbl_empleados WHERE CORREO = req.body.correo AND req.body.CONTRASENA`;
     conexion.query(sql, (err, result) => {
