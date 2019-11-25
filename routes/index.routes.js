@@ -4,7 +4,7 @@ const router = require('express').Router();
 // router.use('/auth', require('./auth.routes'));
 
 // Rutas para probar cosas
-router.use('/test', require('./test.routes'));
+router.use('/test', require('./test-routes'));
 
 // Rutas para renderizar vistas 
 router.use('/gets', require('./rutas-get')); 

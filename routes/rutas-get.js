@@ -75,5 +75,66 @@ module.exports = function(app)
    app.get('/user-update',function(req,res){ // http://localhost:3000/api_mantenimiento/gets/user-update      
       res.render('user-update')
    });
+
+   app.get('/add-player',function(req,res){ // http://localhost:3000/api_mantenimiento/gets/add-player    
+      res.render('add-player');
+   });
    
+   
+   app.get('/pruebaEjs', function(req, res){   // http://localhost:3337/api_mantenimiento/gets/pruebaEjs
+      res.type('text/html');
+      res.render('index', {
+          tituloPagina: 'Mi primera pagina con EJS',
+          tituloBody:'Probando EJS',
+          seccion:'Aqui irá una seccion'
+      }, function(err, html){
+          if(err) throw err;
+          res.send(html);
+      });
+  });
+
+
+  app.get('/pruebaEjs2', function(req, res){    // http://localhost:3337/api_mantenimiento/gets/pruebaEjs2
+   res.render('index2', {
+       tituloPagina: 'Mi primera pagina con EJS',
+       tituloBody:'Probando EJS',
+       unArray: ['que', 'tal', 'estamos'],
+       unObjeto: {
+           primero:'pues',
+           segundo:'estamos',
+           tercero:'bastante bien'
+       }
+   });
+});
+
+
+
+app.get('/pruebaEjs3', function(req, res){
+   app.render('sections/seccionDinamica',{
+           mensaje:'Se ha procesado esta seccion antes de ' +
+           'introducirla en la vista'},
+       function(err, html){
+           if (err) throw err;
+           res.render('index.ejs',
+               {
+                   tituloPagina: 'Mi primera pagina con EJS',
+                   tituloBody:'Probando EJS',
+                   seccion: html
+               }
+           );
+       }
+   );
+});
+
+
+app.get('/pruebaEjs4', function(req, res){
+   res.render('index3.ejs',
+       {
+           tituloPagina: 'Mi primera pagina con EJS',
+           tituloBody:'Probando EJS',
+           mensaje: 'Un mensaje cualquiera'
+       }
+   );
+});
+
    }

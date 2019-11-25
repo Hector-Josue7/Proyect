@@ -1,23 +1,30 @@
+
 var mysql = require("mysql");
 var bcrypt = require('bcryptjs');
-const credenciales = {
-    host: 'localhost',
-    user: 'root',
-    password: '',
+var bodyParser = require("body-parser");
+var credenciales = {
+    host:"localhost",
+    user:"root",
+    password:"",
+    port:"3306",
     database: "bd_rutinas"
 };
 
+
+
 function retornaFormatos (req, res){
     var conexion = mysql.createConnection(credenciales);
-    conexion.query(
-        "SELECT * FROM `tbl_formatos`",
-        [], (error, data, fields)=>{
-            console.log(error);
-            res.send(data);
-            res.end();
-            conexion.end();
-        });
-}
+   conexion.query("SELECT * FROM `tbl_formatos`",[],
+     function(error, data, fields){
+     if(!error){
+    console.log(data);
+    res.send(data);
+        // res.end();
+        // conexion.end();
+        }else
+  console.log(error);
+    }
+); }
 
 function retornaUnaUnidad (req, res){
     var conexion = mysql.createConnection(credenciales);
@@ -32,6 +39,13 @@ function retornaUnaUnidad (req, res){
 
 function insertaMaster (req, res){
     var conexion = mysql.createConnection(credenciales);
+    conexion.connect( error =>{
+     if(!!error)
+  console.log(error);
+  else
+  console.log('Conectado');
+     
+    });
     conexion.query(`INSERT INTO tbl_master(ID_EQUIPO,ID_COMPONENTE_FINAL,ID_EMPLEADO,SUBTIPO_VALOR_LISTA) VALUES (?,?,?,?)`,[
          req.body.ID_EQUIPO, 
          req.body.ID_COMPONENTE_FINAL,
@@ -49,6 +63,19 @@ function insertaMaster (req, res){
              res.end();
            }
         });
+}
+function insertaPais(req, res){
+    console.log(req.body);
+
+//  let conexion = mysql.createConnection(credenciales);
+//  conexion.query(`INSERT INTO tbl_paises (ID_PAIS, PAIS) VALUES (?,?);`,[
+//      req.body.ID_PAIS,
+//      req.body.PAIS
+//  ], (error, data, fields)=>{
+//      if(error){
+//          res.send(error);
+//      }
+//  })   
 }
 function verificaLogin (req, res){
     var sql = ` SELECT * FROM tbl_empleados WHERE CORREO = req.body.correo AND req.body.CONTRASENA`;
@@ -183,6 +210,7 @@ module.exports = {
     retornaFormatos,
     retornaUnaUnidad,
     insertaMaster,
+    insertaPais,
     verificaLogin,
     actualizaElemento,
     obtenerUnidades,

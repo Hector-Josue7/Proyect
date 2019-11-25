@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var session  = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const engine = require('ejs-mate');
 // const morgan = require('morgan');
 const routes = require('./routes/index.routes');
 // var passport = require('passport');
@@ -23,7 +24,8 @@ app.use(session({secret: 'vidyapathaisalwaysrunning', resave: true, saveUninitia
 // app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.set('port', process.env.PORT || 3337);
-app.set('views', __dirname + '/views'); 
+app.set('views', path.join(__dirname, 'views'))
+app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
 
@@ -37,15 +39,20 @@ app.set('view engine', 'ejs');
 app.use('/api_mantenimiento', routes);   //   DESDE ESTA RUTA COMIENZAN LAS RUTAS, SE LES ENLAZA EL PREJIFO api_mantenimiento
 //Servicio de archivos estáticos
 app.use(express.static('public'));
-// Errores del lado del cliente
-app.use((req, res, next) => {
-  const error = new Error('Endpoint inválido');
-  error.status = 404;
-  next(error);
+
+//Error 404
+app.use(function(req, res){
+  res.type('text/plain');
+  res.status(404);
+  res.send('404 - No encontrada');
 });
-// Errores del lado del servidor
-app.use((error, req, res, next) => {
-  res.status(error.status || 500).json({ error: { msg: error.message } });
+
+// Pagina de error 500
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.type('text/plain');
+  res.status(500);
+  res.send('500 - Server Error');
 });
 //puerto de escucha
 app.listen(app.get('port'), () => {

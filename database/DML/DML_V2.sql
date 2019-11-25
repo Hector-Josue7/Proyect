@@ -1139,22 +1139,22 @@ INSERT INTO `tbl_booleanos` (`SUBTIPO_VALOR_BOOLEANO`,`VALOR_CADENA`) VALUES
 ('3 - 1', 'BLANCO'),
 ('3 - 2', 'NEGRO');
 
-INSERT INTO `tbl_listas` (`SUBTIPO_VALOR_LISTA`,`VALOR_CADENA`) VALUES
-('1 - 1', 'VERDE OSCURO'),
-('1 - 2 ', 'VERDE CLARO'),
-('1 - 3', 'ROJO'),
-('1 - 4', 'MORADO'),
-('1 - 5', 'BLANCO'),
-('1 - 6', 'AZUL'),
-('1 - 7', 'AMARILLO'),
-('1 - 8', 'NEGRO'),
-('1 - 9', 'GRIS'),
-('2 - 1', 'BAJO'),
-('2 - 2', 'MEDIO'),
-('2 - 3', 'ALTO'),
-('3 - 1', 'ON'),
-('3 - 2', 'OFF'),
-('3 - 3', 'BLK');
+INSERT INTO `tbl_listas` (`SUBTIPO_VALOR_LISTA`, `VALOR_CADENA`) VALUES
+('1-1', 'VERDE OSCURO'),
+('1-2', 'VERDE CLARO'),
+('1-3', 'ROJO'),
+('1-4', 'MORADO'),
+('1-5', 'BLANCO'),
+('1-6', 'AZUL'),
+('1-7', 'AMARILLO'),
+('1-8', 'NEGRO'),
+('1-9', 'GRIS'),
+('2-1', 'BAJO'),
+('2-2', 'MEDIO'),
+('2-3', 'ALTO'),
+('3-1', 'ON'),
+('3-2', 'OFF'),
+('3-3', 'BLK');
 
 INSERT INTO `tbl_enteros_flotantes` (`SUBTIPO_VALOR_NUMERO`,`VALOR_MINIMO`, `VALOR_MAXIMO`) VALUES
 (1, 12, 15),
