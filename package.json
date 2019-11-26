@@ -56,6 +56,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "req-flash": "0.0.3",
-    "timeago.js": "^4.0.0-beta.2"
+    "timeago.js": "^4.0.0-beta.2",
+    "method-override": "~2.2.0"
   }
 }
