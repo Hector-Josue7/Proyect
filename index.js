@@ -4,11 +4,12 @@ var session  = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 // const engine = require('ejs-mate');
-const hbs = require('express-handlebars')
+ 
 // const morgan = require('morgan');
 const routes = require('./routes/index.routes');
 // var passport = require('passport');
 var flash    = require('connect-flash');
+const exphbs = require('express-handlebars');
 // const MySQLStore = require('express-mysql-session')(session);
 // const { database } = require('./keys');
 const app = express();
@@ -25,9 +26,19 @@ app.use(session({secret: 'vidyapathaisalwaysrunning', resave: true, saveUninitia
 // app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.set('port', process.env.PORT || 3337);
-app.set('views', path.join(__dirname, 'views'))
-app.engine('ejs', engine);
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
+app.engine('.hbs', exphbs({
+   defaultLayout: 'main',
+  // layoutsDir: path.join(app.get('views'), 'layouts'),
+  // partialsDir: path.join(app.get('views'), 'partials'),
+  // helpers: require('./helpers'),
+  extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
+
+// app.set('views', path.join(__dirname, 'views'))
+// app.engine('ejs', engine);
+// app.set('view engine', 'ejs');
 
 
 // app.use(session({

@@ -137,4 +137,15 @@ app.get('/pruebaEjs4', function(req, res){
    );
 });
 
+
+app.get('/pruebaEjs4', function(req, res){ // http://localhost:3337/api_mantenimiento/gets/pruebaEjs4
+res.render('index');
+});
+
+
+
+
+
+
+
    }

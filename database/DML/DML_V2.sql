@@ -112,12 +112,12 @@ INSERT INTO `tbl_localidades` (`ID_LOCALIDAD`,`ID_PAIS`, `ID_SITIO`, `NOMBRE_LOC
 (43, 506, 11, 'MATA DE CAÑA', 'MAT'),
 (44, 506, 11, 'LIBERIA', 'LIB');
 
-INSERT INTO `tbl_unidades` (`ID_UNIDAD`,`ID_PAIS`, `ID_SITIO`, `NOMBRE_UNIDAD`, `DESCRIPCION_UNIDAD`) VALUES
-(1, 504, 1, 'AUTOMATIZACIÓN (HONDURAS)', 'Somos una unidad dedicada a automatizar procesos en cada uno de las rutinas que se hacen de forma diaria, semanal, mensual y trimestral estamos ubicados, nos repartimos en otras unidades tambien'),
-(2, 504, 1, 'ENERGÍA Y EQUIPOS AUXILIARES (HONDURAS)', 'somos una unidad dedicada a supervisar los equipos que se ubican en cada sitio, revisamos torres a las cuales se les da mantenimiento y se hacen reportes de como se encuentran'),
-(3, 504, 1, 'MACC (HONDURAS)', 'somos una unidad dedicada al mantenimiento de los equipos que le hacen llamadas a las aeronaves, se le privee mantenimiento a los equipos que se encuentran en las UCSS, a los equipos que estan desocupados, haciendolo de diferentes periodicidades'),
-(4, 504, 2, 'COMUNICACIÓN Y RADIO AYUDA (HONDURAS)', 'somops una unidad dedicada a supervisar otros centros, esto contribuye a mejorar el apoyo entre la comunidad de cocesna'),
-(5, 504, 2, 'VIGILANCIA Y RADAR (HONDURAS)', 'somos una unidad dedicada a proveer monitoreo a las aeronaves, conducimos de forma segura a los aviones trazandoles rutas para evitar que hayan colisiones, proveyendo seguridad a los pasajeros');
+INSERT INTO `tbl_unidades` (`ID_UNIDAD`, `ID_SITIO`, `NOMBRE_UNIDAD`, `DESCRIPCION_UNIDAD`) VALUES
+(1,1, 'AUTOMATIZACIÓN (HONDURAS)', 'Somos una unidad dedicada a automatizar procesos en cada uno de las rutinas que se hacen de forma diaria, semanal, mensual y trimestral estamos ubicados, nos repartimos en otras unidades tambien'),
+(2,1, 'ENERGÍA Y EQUIPOS AUXILIARES (HONDURAS)', 'somos una unidad dedicada a supervisar los equipos que se ubican en cada sitio, revisamos torres a las cuales se les da mantenimiento y se hacen reportes de como se encuentran'),
+(3,1, 'MACC (HONDURAS)', 'somos una unidad dedicada al mantenimiento de los equipos que le hacen llamadas a las aeronaves, se le privee mantenimiento a los equipos que se encuentran en las UCSS, a los equipos que estan desocupados, haciendolo de diferentes periodicidades'),
+(4,2, 'COMUNICACIÓN Y RADIO AYUDA (HONDURAS)', 'somops una unidad dedicada a supervisar otros centros, esto contribuye a mejorar el apoyo entre la comunidad de cocesna'),
+(5,2, 'VIGILANCIA Y RADAR (HONDURAS)', 'somos una unidad dedicada a proveer monitoreo a las aeronaves, conducimos de forma segura a los aviones trazandoles rutas para evitar que hayan colisiones, proveyendo seguridad a los pasajeros');
 
 INSERT INTO `tbl_areas` (`ID_AREA`,`ID_UNIDAD`, `ID_AREA_SUPERIOR`, `NOMBRE_AREA`) VALUES
 (1, 1, NULL, 'ADMINISTRATIVA'),
@@ -144,12 +144,12 @@ INSERT INTO `tbl_mantenimientos` (`ID_MANTENIMIENTO`,`TITULO_MANTENIMIENTO`, `DE
 (7, 'SISTEMA WSACC', '   molestiae, qui voluptates cupiditate tempora harum illum magnam distinctio cum omnis molestias impedit corrupti ', '2016-12-14 06:00:00', '2017-04-14 10:00:00'),
 (8, 'RUTINA DE MANTENIMIENTO DEL SISTEMA AMH', 'nulla error sint corporis impedit nam quasi necessitatibus. Ducimus aspernatur quis repudiandae facilis incidunt', '2018-10-09 06:00:00', '2018-11-12 17:00:00');
 
-INSERT INTO `tbl_empleados` (`ID_EMPLEADO`,`ID_PAIS`,`ID_UNIDAD`, `ID_CARGO`,`ID_MANTENIMIENTO`,`NOMBRE`, `CORREO`, `USUARIO`, `CONTRASENA`) VALUES
-(1,504, 1, 8,1, 'Louie Liam Leannon Moen', 'louieliam@gmail.com', 'luilieliam1', 'asd.123'),
-(2,504, 1, 8,1, 'Darrin Hank Becker Welch', 'darrinhank@hotmail.com', 'darrinhank2', 'asd.123'),
-(3,504, 5, 8,1, 'Brett Jaeden Rempel Hermiston', 'brettjaedenr@gmail.com', 'brettjaeden3', 'asd.123'),
-(4,504, 5, 8,1, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123'),
-(5,504, 5, 8,1, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123');
+INSERT INTO `tbl_empleados` (`ID_EMPLEADO`,`ID_UNIDAD`, `ID_CARGO`,`ID_MANTENIMIENTO`,`NOMBRE`, `CORREO`, `USUARIO`, `CONTRASENA`) VALUES
+(1, 1, 8,1, 'Louie Liam Leannon Moen', 'louieliam@gmail.com', 'luilieliam1', 'asd.123'),
+(2, 1, 8,1, 'Darrin Hank Becker Welch', 'darrinhank@hotmail.com', 'darrinhank2', 'asd.123'),
+(3, 5, 8,1, 'Brett Jaeden Rempel Hermiston', 'brettjaedenr@gmail.com', 'brettjaeden3', 'asd.123'),
+(4, 5, 8,1, 'Christ Gilbert Kunde Hoppe', 'christgilbertk@hotmail.com', 'christgilbert4', 'asd.123'),
+(5, 5, 8,1, 'Russ Moises Osinski Rippin', 'russmoises@hotmail.com', 'russmoises5', 'asd.123');
 
 INSERT INTO `tbl_sistemas` (`ID_SISTEMA`,`ID_UNIDAD`, `NOMBRE_SISTEMA`) VALUES
 (1, 2, 'PLANTA PBX TELEFÓNICA'),
@@ -1167,16 +1167,16 @@ INSERT INTO `tbl_enteros_flotantes` (`SUBTIPO_VALOR_NUMERO`,`VALOR_MINIMO`, `VAL
 (8, 450, 500);
 
 INSERT INTO `tbl_master` (`ID_DATO_INSERTADO`,`ID_EQUIPO`, `ID_COMPONENTE_FINAL`, `ID_EMPLEADO`, `FECHA_AUTOMATICA`, `SUBTIPO_VALOR_BOOLEANO`, `SUBTIPO_VALOR_LISTA`, `SUBTIPO_VALOR_NUMERO`, `DATO_NUMERICO_OBTENIDO`) VALUES
-(1, 1, 1, 1, '2019-11-14 16:43:44', NULL, '1 - 1', NULL, NULL),
-(2, 1, 2, 1, '2019-11-14 16:43:44', NULL, '1 - 8', NULL, NULL),
-(3, 1, 3, 1, '2019-11-14 16:44:24', NULL, '1 - 9', NULL, NULL),
-(4, 2, 4, 1, '2019-11-14 16:46:17', NULL, '1 - 1', NULL, NULL),
-(5, 2, 5, 1, '2019-11-14 16:46:17', NULL, '1 - 8', NULL, NULL),
-(6, 2, 6, 1, '2019-11-14 16:47:21', NULL, '1 - 9', NULL, NULL),
-(7, 3, NULL, 1, '2019-11-14 16:48:46', NULL, '1 - 1', NULL, NULL),
-(8, 4, 7, 1, '2019-11-14 16:50:31', NULL, '1 - 1', NULL, NULL),
-(9, 4, 8, 1, '2019-11-14 16:50:31', NULL, '1 - 8', NULL, NULL),
-(10, 4, 9, 1, '2019-11-14 16:51:06', NULL, '1 - 1', NULL, NULL),
-(11, 5, 10, 1, '2019-11-14 16:53:38', NULL, '1 - 1', NULL, NULL),
-(12, 5, 11, 1, '2019-11-14 16:53:38', NULL, '1 - 8', NULL, NULL),
-(13, 5, 12, 1, '2019-11-14 16:54:35', NULL, '1 - 9', NULL, NULL);
+(1, 1, 1, 1, '2019-11-14 16:43:44', NULL, '1-1', NULL, NULL),
+(2, 1, 2, 1, '2019-11-14 16:43:44', NULL, '1-8', NULL, NULL),
+(3, 1, 3, 1, '2019-11-14 16:44:24', NULL, '1-9', NULL, NULL),
+(4, 2, 4, 1, '2019-11-14 16:46:17', NULL, '1-1', NULL, NULL),
+(5, 2, 5, 1, '2019-11-14 16:46:17', NULL, '1-8', NULL, NULL),
+(6, 2, 6, 1, '2019-11-14 16:47:21', NULL, '1-9', NULL, NULL),
+(7, 3, NULL, 1, '2019-11-14 16:48:46', NULL, '1-1', NULL, NULL),
+(8, 4, 7, 1, '2019-11-14 16:50:31', NULL, '1-1', NULL, NULL),
+(9, 4, 8, 1, '2019-11-14 16:50:31', NULL, '1-8', NULL, NULL),
+(10, 4, 9, 1, '2019-11-14 16:51:06', NULL, '1-1', NULL, NULL),
+(11, 5, 10, 1, '2019-11-14 16:53:38', NULL, '1-1', NULL, NULL),
+(12, 5, 11, 1, '2019-11-14 16:53:38', NULL, '1-8', NULL, NULL),
+(13, 5, 12, 1, '2019-11-14 16:54:35', NULL, '1-9', NULL, NULL);

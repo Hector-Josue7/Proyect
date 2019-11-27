@@ -1,21 +1,8 @@
 
-
-select *
-from libros
-where titulo='El aleph' and
-  autor='Borges' and
-  editorial='Planeta';
-
-Luego eliminamos con "limit" la cantidad sobrante
-(tenemos 3 y queremos solo 1):
-
-delete from libros
-  where titulo='El aleph' and
-  autor='Borges' and
-  editorial='Planeta'
-limit 2;
-
-
+SELECT A.NOMBRE_CIUDAD, B.NOMBRE_SITIO, B.TRILITERAL, C.NOMBRE_UNIDAD, C.DESCRIPCION_UNIDAD
+FROM TBL_CIUDADES A 
+INNER JOIN TBL_SITIOS B ON A.ID_CIUDAD = B.ID_CIUDAD
+INNER JOIN TBL_UNIDADES C ON B.ID_SITIO = B.ID_SITIO
 
 
 SELECT A.ID_UNIDAD, B.ID_PAIS, A.ID_CIUDAD, A.ID_SITIO, A.NOMBRE_UNIDAD
@@ -73,3 +60,7 @@ SELECT * FROM TBL_EQUIPOS WHERE UBICACION_FISICA like '%'+ @titulo +'%'
 
 CREATE TRIGGER before_master_insert
 BEFORE INSERT tbl_historial_accesos
+
+
+
+
